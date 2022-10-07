@@ -13,26 +13,24 @@ export default function () {
           <ParallaxBannerLayer image="/assets/kf-80.png" speed={-6} />
           <ParallaxBannerLayer image="/assets/kf-10.png" speed={-2} />
           <ParallaxBannerLayer image="/assets/kf-100.png" speed={5} />
-          <div className="flex flex-row flex-wrap translate-y-24 items-center justify-center mx-20 md:w-1/2 lg:w-1/2  ">
-            <h1 className="text-5xl md:text-7xl lg:text-7xl text-color-secondary font-bold drop-shadow-lg">
-              Adventure into metaverse reality
+          <div className="flex flex-row flex-wrap translate-y-10 items-center justify-center mx-10 md:mx-20 md:w-1/2 lg:w-1/2  ">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl text-color-secondary font-bold drop-shadow-lg">
+              Adventure into metaverse reality.
             </h1>
-            <p className="text-white text-medium pt-5">
+            <p className="text-white text-medium md:text-lg pt-5">
               A decentralized exchange that allows the lenders to post and farm
               yield on their available gaming NFT’s in one location, with
               specific expectations set.
             </p>
-          </div>
-          <div className="flex flex-row translate-y-24 items-center justify-center mx-20 pt-5 w-1/2  ">
-            <div className="flex-col basis-full">
+            <div className="flex-col basis-full pt-5">
               <button
                 type="button"
-                class="text-black bg-amber-300 hover:bg-amber-500 font-medium rounded-lg shadow-lg text-sm px-5 py-2.5 mr-2 mb-2  "
+                class="text-white bg-amber-300 hover:bg-emerald-900 font-medium rounded-lg shadow-lg text-sm md:text-lg  px-5 py-2.5 mr-2 mb-2  "
               >
                 Launch App
               </button>
             </div>
-          </div>
+          </div> 
         </ParallaxBanner>
       </ParallaxContainer>
     </>

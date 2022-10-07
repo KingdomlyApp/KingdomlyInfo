@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+}
+
 .text-color-main {
   color: #fadc69;
 }
@@ -17,13 +23,29 @@
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.img-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 .text-shadow {
-  text-shadow: 2px 2px #FF0000;
+  text-shadow: 2px 2px #ff0000;
 }
 
 body {
   padding: 0 !important;
-  margin: 0; 
+  margin: 0;
   font-size: 16px;
 }
 
