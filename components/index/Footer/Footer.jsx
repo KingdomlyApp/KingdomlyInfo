@@ -3,19 +3,20 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 export function FooterLandingPage() {
   return (
-    <div className="pb-16" style={{ backgroundColor: "#E5B052" }}>
-      <div
-        className="w-full min-h-[25vh] md:min-h-[50vh] lg:min-h-[70vh]"
-        style={{
-          backgroundImage: `url('/assets/bottom bg.png')`,
-          backgroundSize: "cover",
-        }}
-      />
+    <div
+      className="w-full h-[140vh] md:h-[145vh]"
+      style={{
+        backgroundImage: `url('/assets/bottom bg.png')`,
+        backgroundSize: "cover",
+      }}
+    >
+      {/* FILLER DIV */}
+      <div className="h-[65vh] md:h-[75vh]"></div>
       <div className="flex flex-row items-center justify-center mx-10 md:mx-20 flex-wrap">
-        <h1 className="basis-full text-center text-2xl sm:text-3xl md:text-5xl text-color-secondary font-extrabold drop-shadow-lg">
+        <h1 className="basis-full text-center text-2xl md:text-3xl lg:text-5xl text-color-secondary font-extrabold drop-shadow-lg">
           CONNECT WITH US
         </h1>
-        <p className=" text-white text-sm sm:text-md md:text-xl text-center pt-5 lg:w-1/2">
+        <p className=" text-white text-sm sm:text-base lg:text-xl text-center pt-5 lg:w-1/2">
           Join the revolution to make the gaming NFT lending and borrowing
           markets open for all. Subscribe to our waitlist to have early access
           to our cross chain borrowing and lending protocol.
@@ -65,7 +66,7 @@ export function FooterLandingPage() {
           </button>
         </div>
       </div>
-      <footer className="bg-transparent pt-16 px-0 sm:px-20">
+      <footer className="bg-transparent pt-10 lg:pt-16 px-0 sm:px-20">
         <div className="flex flex-wrap justify-center md:justify-between px-5">
           <a
             href="#/"
@@ -80,11 +81,11 @@ export function FooterLandingPage() {
               Kingdomly
             </span>
           </a>
-          <ul className="flex flex-wrap items-center text-lg text-white">
+          <ul className="flex flex-wrap items-center text-white">
             <li>
               <a
                 href="#"
-                className="mr-3 text-sm md:text-lg hover:underline md:mr-6"
+                className="mr-3 text-sm sm:text-base lg:text-lg hover:underline md:mr-6"
               >
                 About
               </a>
@@ -92,20 +93,20 @@ export function FooterLandingPage() {
             <li>
               <a
                 href="#"
-                className="mr-3 text-sm md:text-lg hover:underline md:mr-6 "
+                className="mr-3 text-sm sm:text-base lg:text-lg hover:underline md:mr-6 "
               >
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="#" className="text-sm md:text-lg hover:underline">
+              <a href="#" className="text-sm sm:text-base lg:text-lg hover:underline">
                 Privacy Policy
               </a>
             </li>
           </ul>
         </div>
         <hr className=" border-white my-4 md:my-8 mx-4 sm:mx-0" />
-        <span className="block  text-white  text-center text-sm md:text-lg ">
+        <span className="block  text-white  text-center text-sm sm:text-base lg:text-lg ">
           © 2022{" "}
           <a href="#/" className="hover:underline ">
             Kingdomly

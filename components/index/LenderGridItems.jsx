@@ -1,14 +1,44 @@
-//Grid Items for "WHAT WE OFFER" Part 
-export default function ({ index, content }) {
+import { useState } from "react";
+
+//Grid Items for "WHAT WE OFFER" Part
+export default function ({ index, content, extended }) {
+  const [isExtended, setExtended] = useState(false);
+
   return (
-    <div
-      className="block text-center m-3 px-6 py-9 w-11/12 h-48 md:w-48 md:h-48 rounded-lg shadow-md"
-      style={{ backgroundColor: "#0B1814" }}
-    >
-      <h5 className="mb-5 text-5xl font-bold text-color-main">{index}</h5>
-      <p className="text-xl font-semibold tracking-tight text-color-main">
-        {content}
-      </p>
-    </div>
+    <>
+      <div
+        onMouseEnter={() => setExtended(true)}
+        onMouseLeave={() => setExtended(false)}
+        className={
+          isExtended
+            ? "block text-start m-3 px-6 py-9 w-11/12 h-fit md:w-52 xl:h-[64vh] rounded-lg shadow-md"
+            : "block text-center m-3 px-6 py-9 w-11/12 h-52 md:w-52 md:h-52 rounded-lg shadow-md"
+        }
+        style={{ backgroundColor: isExtended ? "white" : "#0B1814" }}
+      >
+        <h5
+          className={
+            isExtended
+              ? "mb-5 text-5xl font-bold text-color-secondary text-center"
+              : "mb-5 text-5xl font-bold text-color-main text-center"
+          }
+        >
+          {index}
+        </h5>
+        <p
+          className={
+            isExtended
+              ? "text-xl font-semibold tracking-tight text-color-secondary text-center"
+              : "text-xl font-semibold tracking-tight text-color-main text-center"
+          }
+        >
+          {content}
+        </p>
+        <div className={isExtended ? "" : "hidden"}>
+          <hr className="my-5 bg-black h-1" />
+          <p className="text-md font-normal text-black ">{extended}</p>
+        </div>
+      </div>
+    </>
   );
 }
