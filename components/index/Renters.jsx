@@ -2,8 +2,9 @@ import RentalItem from "./Rentals/RentalItem";
 export default function Renters() {
   return (
     <div
-      className="vertical pt-[10vh] pb-[5vh] lg:pb-[20vh] px-10 md:px-15 lg:px-20"
+      className="vertical py-[10vh] lg:pb-[20vh] px-10 md:px-15 lg:px-20"
       style={{ backgroundColor: "#0B1814" }}
+      id="rentals"
     >
       <div className="flex justify-center">
         <strong className="text-white text-3xl sm:text-5xl text-center">

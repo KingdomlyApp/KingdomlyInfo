@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import LenderGridItems from "../components/index/LenderGridItems";
 import Head from "next/head";
 
-import NavbarLandingPage from "../components/index/Navbar/Navbar";
 import ParallaxHero from "../components/index/ParallaxHero";
 import Renters from "../components/index/Renters";
 import Roadmap from "../components/index/Roadmap";
@@ -21,20 +20,17 @@ export default function Home() {
       </Head>
 
       {/* <--NAV & HERO--> */}
-      <div
-        style={{
-          backgroundImage: 'url("/assets/kf-2.png")',
-          backgroundSize: "cover",
-        }}
-      >
-        <NavbarLandingPage />
-        <ParallaxHero />
-      </div>
+
+      <ParallaxHero />
 
       {/* <--LENDERS--> */}
       <div
-        className="vertical pt-[10vh] md:pt-[10vh] px-10 md:px-20"
-        style={{ backgroundColor: "#122620" }}
+        className="vertical pt-[10vh] md:pt-[10vh] px-10 md:px-20  "
+        style={{
+          backgroundColor: "#122620",
+          backgroundImage: 'url("/assets/bg-wwo.png")',
+        }}
+        id="about"
       >
         <div className="flex justify-center">
           <strong className="text-white text-3xl sm:text-5xl text-center">
@@ -74,7 +70,7 @@ export default function Home() {
             index={5}
             content={"Open for all!"}
             extended={
-              "Anyone with NFTs, may it be 721 or 4907s, can hop in and have their assets for lease! On Kingdomly’s platform, any user can lend as many gaming/utility assets as they would like."
+              "Anyone with NFTs, may it be 721 or 4907, can join and have their assets for lease with no limitations on how many they want to lease! "
             }
           />
         </div>

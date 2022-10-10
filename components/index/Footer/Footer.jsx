@@ -4,16 +4,18 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 export function FooterLandingPage() {
   return (
     <div
-      className="w-full h-[140vh] md:h-[145vh]"
+      className="w-full bg-cover bg-center h-fit pb-5 "
       style={{
         backgroundImage: `url('/assets/bottom bg.png')`,
-        backgroundSize: "cover",
       }}
     >
       {/* FILLER DIV */}
       <div className="h-[65vh] md:h-[75vh]"></div>
-      <div className="flex flex-row items-center justify-center mx-10 md:mx-20 flex-wrap">
-        <h1 className="basis-full text-center text-2xl md:text-3xl lg:text-5xl text-color-secondary font-extrabold drop-shadow-lg">
+      <div
+        className="flex flex-row items-center justify-center mx-10 md:mx-20 flex-wrap"
+        id="contactus"
+      >
+        <h1 className="basis-full text-center text-3xl md:text-4xl lg:text-5xl text-color-secondary font-extrabold drop-shadow-lg">
           CONNECT WITH US
         </h1>
         <p className=" text-white text-sm sm:text-base lg:text-xl text-center pt-5 lg:w-1/2">
@@ -22,30 +24,43 @@ export function FooterLandingPage() {
           to our cross chain borrowing and lending protocol.
         </p>
         <div className="basis-full flex items-center justify-center py-10">
-          <SiFacebook
-            className="drop-shadow-md icon-hover"
-            style={{ marginRight: 30 }}
-            color="white"
-            size={25}
-          />
-          <SiTwitter
-            className="drop-shadow-md"
-            style={{ marginRight: 30 }}
-            color="white"
-            size={25}
-          />
-          <SiDiscord
-            className="drop-shadow-md"
-            style={{ marginRight: 30 }}
-            color="white"
-            size={25}
-          />
-          <SiNotion
-            className="drop-shadow-md"
-            style={{ marginRight: 30 }}
-            color="white"
-            size={25}
-          />
+          <a
+            href="https://twitter.com/KingdomlyApp"
+            title="Twitter"
+            target="_href"
+          >
+            <SiTwitter
+              className="drop-shadow-md icon-hover"
+              style={{ marginRight: 30 }}
+              color="white"
+              size={25}
+            />
+          </a>
+
+          <a
+            href="https://discord.gg/DnGENNCMgs"
+            title="Discord"
+            target="_href"
+          >
+            <SiDiscord
+              className="drop-shadow-md icon-hover"
+              style={{ marginRight: 30 }}
+              color="white"
+              size={25}
+            />
+          </a>
+          <a
+            href="https://kingdomly.notion.site/kingdomly/Kingdomly-474d8b9e948543cc83974c701b50523b"
+            title="Notion"
+            target="_href"
+          >
+            <SiNotion
+              className="drop-shadow-md icon-hover"
+              style={{ marginRight: 30 }}
+              color="white"
+              size={25}
+            />
+          </a>
         </div>
         <div className="basis-full flex flex-wrap justify-center">
           <input
@@ -57,7 +72,7 @@ export function FooterLandingPage() {
           />
           <button
             type="button"
-            class="hidden md:block text-white font-semibold bg-amber-300 hover:bg-emerald-900 rounded-lg shadow-lg text-sm px-3 py-2.5 mt-2 sm:mt-0"
+            class="hidden md:block text-white font-semibold bg-amber-600 hover:bg-amber-300 rounded-lg shadow-lg text-sm px-3 py-2.5 mt-2 sm:mt-0"
           >
             Subscribe
           </button>
@@ -69,7 +84,7 @@ export function FooterLandingPage() {
       <footer className="bg-transparent pt-10 lg:pt-16 px-0 sm:px-20">
         <div className="flex flex-wrap justify-center md:justify-between px-5">
           <a
-            href="#/"
+            href="#"
             className="flex justify-center basis-full pb-3 sm:pb-0 md:basis-0"
           >
             <img
@@ -84,7 +99,7 @@ export function FooterLandingPage() {
           <ul className="flex flex-wrap items-center text-white">
             <li>
               <a
-                href="#"
+                href="#about"
                 className="mr-3 text-sm sm:text-base lg:text-lg hover:underline md:mr-6"
               >
                 About
@@ -92,15 +107,18 @@ export function FooterLandingPage() {
             </li>
             <li>
               <a
-                href="#"
+                href="#rentals"
                 className="mr-3 text-sm sm:text-base lg:text-lg hover:underline md:mr-6 "
               >
-                Terms of Service
+                Rentals
               </a>
             </li>
             <li>
-              <a href="#" className="text-sm sm:text-base lg:text-lg hover:underline">
-                Privacy Policy
+              <a
+                href="#roadmap"
+                className="text-sm sm:text-base lg:text-lg hover:underline"
+              >
+                Roadmap
               </a>
             </li>
           </ul>
