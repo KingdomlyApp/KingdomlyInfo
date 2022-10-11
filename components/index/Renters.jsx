@@ -19,6 +19,7 @@ export default function Renters() {
             "This duration then gets multiplied by the lender's set rental price to arrive at the total rent price",
           ]}
           image={"/assets/card-1.png"}
+          icons={1}
         />
         <RentalItem
           reverse={true}
@@ -28,6 +29,7 @@ export default function Renters() {
             "At the end of the borrowing period the the “usership” status is transferred from the “Borrower” wallet back to the “Lender” wallet",
           ]}
           image={"/assets/card-2.png"}
+          icons={2}
         />
         <RentalItem
           title={"Smart-regulation of rental assets."}
@@ -36,6 +38,7 @@ export default function Renters() {
             "In the case that the NFT is transferred out of the “Lender” wallet, “usership” status is immediately revoked from “Borrower” wallet and transferred to the new owner wallet address",
           ]}
           image={"/assets/card-3.png"}
+          icons={3}
         />
       </div>
     </div>
