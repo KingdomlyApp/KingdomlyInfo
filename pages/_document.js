@@ -11,6 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/assets/logo.png" />
+        <title>Kingdomly</title>
       </Head>
       <body>
         <Main />
