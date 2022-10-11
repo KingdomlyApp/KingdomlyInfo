@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Grid Items for "WHAT WE OFFER" Part
-export default function ({ index, content, extended }) {
+export default function LenderItem({ index, content, extended }) {
   const [isExtended, setExtended] = useState(false);
 
   return (

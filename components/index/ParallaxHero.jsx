@@ -5,7 +5,7 @@ import castle from "../../public/assets/kf-10.png";
 import NavbarLandingPage from "./Navbar/Navbar";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-export default function () {
+export default function ParallaxHero() {
   return (
     <>
       <div
