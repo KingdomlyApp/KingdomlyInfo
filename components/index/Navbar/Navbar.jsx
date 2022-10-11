@@ -11,7 +11,7 @@ export function NavbarLandingPage() {
             <img
               src="/assets/logo.png"
               className="mr-3 h-6 sm:h-9"
-              alt="Flowbite Logo"
+              alt="Kingdomly Logo"
             />
             <span className="self-center text-2xl text-white font-bold whitespace-nowrap ">
               Kingdomly
