@@ -31,7 +31,7 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
       </div>
       <div className={classOrder}>
         <img
-          src="/assets/cards.png"
+          src={image}
           className="object-contain img-float aspect-[17/12] self-center"
           alt="Card"
         />
