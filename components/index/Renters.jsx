@@ -26,7 +26,7 @@ export default function Renters() {
           title={"Automatically get a hold of your rights."}
           content={[
             "This total rent price gets deducted from the borrower’s balance and sent to the Kingdomly contract which then transfers “usership” rights linked to the rented NFT from  “Lender” to “Borrower”",
-            "At the end of the borrowing period the the “usership” status is transferred from the “Borrower” wallet back to the “Lender” wallet",
+            "At the end of the borrowing period the “usership” status is transferred from the “Borrower” wallet back to the “Lender” wallet",
           ]}
           image={"/assets/card-2.png"}
           icons={2}

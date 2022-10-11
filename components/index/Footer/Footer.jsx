@@ -1,5 +1,5 @@
 import { SiFacebook, SiDiscord, SiNotion, SiTwitter } from "react-icons/si";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { BsFillArrowRightCircleFill, BsBoxArrowUpRight } from "react-icons/bs";
 
 export function FooterLandingPage() {
   return (
@@ -10,7 +10,7 @@ export function FooterLandingPage() {
       }}
     >
       {/* FILLER DIV */}
-      <div className="h-[65vh] md:h-[75vh]"></div>
+      <div className="h-[50vh] md:h-[55vh]"></div>
       <div
         className="flex flex-row items-center justify-center mx-10 md:mx-20 flex-wrap"
         id="contactus"
@@ -116,9 +116,18 @@ export function FooterLandingPage() {
             <li>
               <a
                 href="#roadmap"
-                className="text-sm sm:text-base lg:text-lg hover:underline"
+                className="text-sm sm:text-base lg:text-lg hover:underline md:mr-6"
               >
                 Roadmap
+              </a>
+            </li>
+            <li>
+              <a
+                href="#/"
+                className="flex items-center text-sm sm:text-base lg:text-lg hover:underline"
+              >
+                Docs {"\xa0"}
+                <BsBoxArrowUpRight size={15} />
               </a>
             </li>
           </ul>
