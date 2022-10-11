@@ -4,7 +4,7 @@ export function NavbarLandingPage() {
   const [navbarOpen, setNavbarOpen] = useState(true);
   return (
     <>
-      <nav className="bg-transparent px-10 md:px-20 py-2">
+      <nav className="bg-transparent px-10 mdlg:px-20 py-2">
         <div className="flex flex-wrap justify-between items-center mx-auto">
           <a href="#/" className="flex items-center">
             <img
@@ -16,11 +16,11 @@ export function NavbarLandingPage() {
               Kingdomly
             </span>
           </a>
-          <div className="flex md:order-2">
+          <div className="flex mdlg:order-2">
             <button
               data-collapse-toggle="navbar-cta"
               type="button"
-              className="inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden hover:text-green-900"
+              className="inline-flex items-center p-2 text-sm text-white rounded-lg mdlg:hidden hover:text-green-900"
               aria-controls="navbar-cta"
               aria-expanded="false"
               onClick={() => {
@@ -49,14 +49,14 @@ export function NavbarLandingPage() {
             </button>
           </div>
           <div
-            className="justify-between items-center md:flex w-full md:w-auto md:order-2 bg-black md:bg-transparent mt-2 md:mt-0 bg-opacity-20 rounded-lg"
+            className="justify-between items-center mdlg:flex w-full mdlg:w-auto mdlg:order-2 bg-black mdlg:bg-transparent mt-2 mdlg:mt-0 bg-opacity-20 rounded-lg"
             hidden={navbarOpen}
           >
-            <ul className="flex flex-col p-4 bg-transparent md:flex-row md:space-x-8 md:mt-0 text-sm md:text-base md:font-medium ">
+            <ul className="flex flex-col p-4 bg-transparent mdlg:flex-row mdlg:space-x-8 mdlg:mt-0 text-sm mdlg:text-base mdlg:font-medium ">
               <li>
                 <a
                   href="#about"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 md:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:p-0 drop-shadow-lg"
                 >
                   About
                 </a>
@@ -64,7 +64,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#rentals"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 md:hover:bg-transparent md:hover:text-green-900 md:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:hover:bg-transparent mdlg:hover:text-green-900 mdlg:p-0 drop-shadow-lg"
                 >
                   Rentals
                 </a>
@@ -72,7 +72,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#roadmap"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 md:hover:bg-transparent md:hover:text-green-900 md:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:hover:bg-transparent mdlg:hover:text-green-900 mdlg:p-0 drop-shadow-lg"
                 >
                   Roadmap
                 </a>
@@ -80,7 +80,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#contactus"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 md:hover:bg-transparent md:hover:text-green-900 md:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:hover:bg-transparent mdlg:hover:text-green-900 mdlg:p-0 drop-shadow-lg"
                 >
                   Community
                 </a>
@@ -88,7 +88,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#about"
-                  className="flex items-center py-2 pr-4 pl-3 text-white hover:text-green-900 md:p-0 drop-shadow-lg"
+                  className="flex items-center py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:p-0 drop-shadow-lg"
                 >
                   Docs {"\xa0"}
                   <BsBoxArrowUpRight size={15} />
