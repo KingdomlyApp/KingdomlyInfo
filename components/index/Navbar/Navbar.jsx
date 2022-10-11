@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 export function NavbarLandingPage() {
-  const [navbarOpen, setNavbarOpen] = useState(false); 
+  const [navbarOpen, setNavbarOpen] = useState(true);
   return (
     <>
       <nav className="bg-transparent px-10 md:px-20 py-2">
