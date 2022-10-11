@@ -28,10 +28,10 @@ export function FooterLandingPage() {
             href="https://twitter.com/KingdomlyApp"
             title="Twitter"
             target="_href"
+            className="self-center px-3"
           >
             <SiTwitter
               className="drop-shadow-md icon-hover"
-              style={{ marginRight: 30 }}
               color="white"
               size={25}
             />
@@ -41,10 +41,10 @@ export function FooterLandingPage() {
             href="https://discord.gg/DnGENNCMgs"
             title="Discord"
             target="_href"
+            className="self-center px-3"
           >
             <SiDiscord
               className="drop-shadow-md icon-hover"
-              style={{ marginRight: 30 }}
               color="white"
               size={25}
             />
@@ -53,10 +53,10 @@ export function FooterLandingPage() {
             href="https://kingdomly.notion.site/kingdomly/Kingdomly-474d8b9e948543cc83974c701b50523b"
             title="Notion"
             target="_href"
+            className="self-center px-3"
           >
             <SiNotion
               className="drop-shadow-md icon-hover"
-              style={{ marginRight: 30 }}
               color="white"
               size={25}
             />
@@ -100,7 +100,7 @@ export function FooterLandingPage() {
             <li>
               <a
                 href="#about"
-                className="mr-3 text-sm sm:text-base lg:text-lg hover:underline md:mr-6"
+                className="mr-3 text-xs sm:text-base lg:text-lg hover:underline md:mr-6"
               >
                 About
               </a>
@@ -108,7 +108,7 @@ export function FooterLandingPage() {
             <li>
               <a
                 href="#rentals"
-                className="mr-3 text-sm sm:text-base lg:text-lg hover:underline md:mr-6 "
+                className="mr-3 text-xs sm:text-base lg:text-lg hover:underline md:mr-6 "
               >
                 Rentals
               </a>
@@ -116,7 +116,7 @@ export function FooterLandingPage() {
             <li>
               <a
                 href="#roadmap"
-                className="text-sm sm:text-base lg:text-lg hover:underline md:mr-6"
+                className="text-xs sm:text-base lg:text-lg hover:underline mr-3 md:mr-6"
               >
                 Roadmap
               </a>
@@ -124,16 +124,16 @@ export function FooterLandingPage() {
             <li>
               <a
                 href="#/"
-                className="flex items-center text-sm sm:text-base lg:text-lg hover:underline"
+                className="mt-1 md:mt-0 flex items-center text-xs sm:text-base lg:text-lg hover:underline"
               >
-                Docs {"\xa0"}
-                <BsBoxArrowUpRight size={15} />
+                Docs
+                <BsBoxArrowUpRight size={12} className="ml-1" />
               </a>
             </li>
           </ul>
         </div>
         <hr className=" border-white my-4 md:my-8 mx-4 sm:mx-0" />
-        <span className="block  text-white  text-center text-sm sm:text-base lg:text-lg ">
+        <span className="block  text-white  text-center text-xs sm:text-base lg:text-lg ">
           © 2022{" "}
           <a href="#/" className="hover:underline ">
             Kingdomly
