@@ -100,10 +100,5 @@ export function NavbarLandingPage() {
       </nav>
     </>
   );
-}
-
-export function NavbarMainApp() {
-  return <></>;
-}
-
+} 
 export default NavbarLandingPage;

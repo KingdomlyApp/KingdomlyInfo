@@ -1,8 +1,11 @@
 export default function Roadmap() {
   return (
     <div
-      className="h-fit p-10 md:p-20"
-      style={{ backgroundColor: "#122620" }}
+      className="h-fit p-10 md:p-20 bg-cover"
+      style={{
+        backgroundColor: "#122620",
+        backgroundImage: 'url("/assets/bg-roadmap.png")', 
+      }}
       id="roadmap"
     >
       <div className="flex flex-wrap justify-center">
