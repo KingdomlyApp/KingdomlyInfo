@@ -4,10 +4,10 @@ export default function Roadmap() {
       className="h-fit p-10 md:p-20 bg-cover"
       style={{
         backgroundColor: "#122620",
-        backgroundImage: 'url("/assets/bg-roadmap.png")', 
+        backgroundImage: 'url("/assets/bg-roadmap.png")',
       }}
       id="roadmap"
-    >
+    > 
       <div className="flex flex-wrap justify-center">
         <strong className="text-white text-3xl sm:text-5xl text-center basis-full pb-10">
           ROADMAP

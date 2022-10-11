@@ -4,13 +4,13 @@ import { BsFillArrowRightCircleFill, BsBoxArrowUpRight } from "react-icons/bs";
 export function FooterLandingPage() {
   return (
     <div
-      className="w-full bg-cover bg-center h-fit pb-5 "
+      className="w-full bg-cover h-fit pb-5 "
       style={{
         backgroundImage: `url('/assets/bottom bg.png')`,
       }}
     >
       {/* FILLER DIV */}
-      <div className="h-[50vh] md:h-[55vh]"></div>
+      <div className="h-[50vh] md:h-[75vh]"></div>
       <div
         className="flex flex-row items-center justify-center mx-10 md:mx-20 flex-wrap"
         id="contactus"
@@ -143,10 +143,5 @@ export function FooterLandingPage() {
       </footer>
     </div>
   );
-}
-
-export function FooterMain() {
-  return <></>;
-}
-
+} 
 export default FooterLandingPage;
