@@ -16,6 +16,10 @@
   color: #122620;
 }
 
+.bg-secondary {
+  background-color: #122620;
+}
+
 @media (min-width: 768px) {
   .md\:text-color-secondary {
     --tw-text-opacity: 1;

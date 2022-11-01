@@ -25,21 +25,31 @@ export default function ParallaxHero() {
             <ParallaxBannerLayer image="/assets/kf-100.png" speed={5} />
             <div className="flex flex-row flex-wrap translate-y-10 items-center mx-10 md:mx-20 w-1/2">
               <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-color-secondary font-bold drop-shadow-lg">
-                Adventure into metaverse reality.
+                Adventure into Metaverse Royalty.
               </h1>
               <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg pt-5">
-                Kingdomly is a platform for borrowing and lending gaming NFT’s.
-                Kingdomly allows anyone to lend any of their gaming NFTs and
-                earn royalties and at the same time hones everyone to enjoy having access
-                to exclusive games without the need of buying your own NFT.
+                Kingdomly is a platform for borrowing and lending NFT’s. With
+                Kingdomly anyone can seamlessly lend their NFT’s and earn
+                interest while hodling. We give crypto enthusiasts the
+                opportunity to access new NFT experiences without making the
+                commitment of a full price purchase. Our initial focus is
+                gaming, but it is our desire to empower NFT experiences of all
+                kinds.
               </p>
               <div className="flex-col basis-full pt-5">
                 <button
                   type="button"
-                  class="text-white bg-amber-600 hover:bg-amber-300 font-medium rounded-lg shadow-lg 
+                  class="text-white bg-amber-600 hover:bg-amber-500 font-medium rounded-lg shadow-lg 
                          text-xs lg:text-lg px-5 py-2.5 mr-2 mb-2  "
                 >
-                  Launch App
+                  Lend Now
+                </button>
+                <button
+                  type="button"
+                  class="text-white bg-green-900 hover:bg-green-800 font-medium rounded-lg shadow-lg 
+                         text-xs lg:text-lg px-5 py-2.5 mr-2 mb-2  "
+                >
+                  Rent Now
                 </button>
               </div>
             </div>

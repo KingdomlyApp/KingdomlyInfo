@@ -13,10 +13,10 @@ export default function Renters() {
       </div>
       <div className="flex flex-wrap justify-center">
         <RentalItem
-          title={"Your all in one rental feature. But in the other way around."}
+          title={"Your one stop shop for NFT renting."}
           content={[
-            "The “Borrower” must specify the duration (in days) that they would like to borrow the NFT for",
-            "This duration then gets multiplied by the lender's set rental price to arrive at the total rent price",
+            "As the “Borrower”, simply specify the amount of days that you’d like to borrow an NFT for and you’re good to go.",
+            "The “Lender’s” set rental price is multiplied by the amount of days that the “Borrower” sets and is sent to the “Lender” upon purchase of the rental.",
           ]}
           image={"/assets/card-1.png"}
           icons={1}

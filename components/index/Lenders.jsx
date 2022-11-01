@@ -27,28 +27,28 @@ export default function Lenders() {
             index={2}
             content={"No more NFT cold starts!"}
             extended={
-              "Most NFT launches encounter cold-starts caused by extremely low or high minting prices. Lending and renting protocols could abolish these factors."
+              "Most NFT launches encounter cold-starts caused by extremely low or high minting prices. Lending and renting protocols help smooth out these factors by giving alternative methods for earning liquidity, this in turn helps floor prices."
             }
           />
           <LenderItem
             index={3}
             content={"Enlist any NFT!"}
             extended={
-              "The initial and core Kingdomly product is a protocol layer that enables peer to peer renting of ERC-721 and ERC-1155 non-fungible tokens (NFTs)."
+              "Kingdomly’s Protocol v1 enables decentralized peer to peer renting of ERC-721 and ERC-1155 non-fungible tokens (NFTs), similar to OpenSeas NFT marketplace but for rentals"
             }
           />
           <LenderItem
             index={4}
             content={"Your NFT, your rules."}
             extended={
-              'Lending implies transferring true “usership” rights to the borrower, The NFT "Lender" is the one to set the rules on how long can someone have it for rent, and how much will it cost.: '
+              ' Lending implies safely transferring true “usership” rights to the borrower, The NFT "Lender" is the one to set the rules on how long someone can have it for rent, and how much it will cost. '
             }
           />
           <LenderItem
             index={5}
             content={"Open for all!"}
             extended={
-              "Anyone with NFTs, may it be 721 or 4907, can join and have their assets for lease with no limitations on how many they want to lease! "
+              "Anyone with NFTs can join and lease their assets with no limitations on how many they want to lease!"
             }
           />
         </div>
