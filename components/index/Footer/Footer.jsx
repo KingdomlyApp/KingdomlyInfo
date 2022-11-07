@@ -1,7 +1,40 @@
 import { SiFacebook, SiDiscord, SiNotion, SiTwitter } from "react-icons/si";
 import { BsFillArrowRightCircleFill, BsBoxArrowUpRight } from "react-icons/bs";
+import { useEffect, useRef, useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 export function FooterLandingPage() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyCJHLTycu5mf4YFc99bK3UsweTYkhgL19g",
+    authDomain: "kingdomly.firebaseapp.com",
+    projectId: "kingdomly",
+    storageBucket: "kingdomly.appspot.com",
+    messagingSenderId: "998091339119",
+    appId: "1:998091339119:web:046036a8ed540556a3649a",
+  };
+
+  const firebase = initializeApp(firebaseConfig);
+  const db = getFirestore(firebase);
+
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const docRef = await addDoc(collection(db, "users"), {
+        email: email,
+        dateSubmitted: new Date(),
+      });
+      setSubmitted(true);
+    } catch (e) {
+      console.error("Error adding user:", e);
+    }
+  };
+
   return (
     <div
       className="w-full bg-cover h-fit pb-5 "
@@ -62,24 +95,46 @@ export function FooterLandingPage() {
             />
           </a>
         </div>
-        <div className="basis-full flex flex-wrap justify-center">
+        <form
+          onSubmit={handleSubmit}
+          className="basis-full flex flex-wrap justify-center"
+        >
           <input
             type="text"
-            autocomplete="email"
+            autoComplete="email"
+            id="email"
+            name="email"
             className="bg-white border font-semibold text-black text-xs md:text-sm rounded-lg w-full basis-9/12 sm:basis-1/3 sm:w-1/3 p-2.5 mx-2 shadow-md"
             placeholder="Email Address"
             required
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <button
-            type="button"
-            class="hidden md:block text-white font-semibold bg-amber-600 hover:bg-amber-300 rounded-lg shadow-lg text-sm px-3 py-2.5 mt-2 sm:mt-0"
-          >
-            Subscribe
-          </button>
-          <button type="button" class="md:hidden px-1.5 sm:mt-0">
-            <BsFillArrowRightCircleFill size={25} color={"white"} />
-          </button>
-        </div>
+          {submitted == false ? (
+            <>
+              <button
+                type="submit"
+                class="hidden md:block text-white font-semibold bg-amber-600 hover:bg-amber-300 rounded-lg shadow-lg text-sm px-3 py-2.5 mt-2 sm:mt-0"
+              >
+                Subscribe
+              </button>
+              <button type="submit" class="md:hidden px-1.5 sm:mt-0">
+                <BsFillArrowRightCircleFill size={25} color={"white"} />
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                type="button"
+                class="hidden md:block text-white font-semibold bg-amber-300 hover:bg-amber-200 rounded-lg shadow-lg text-sm px-3 py-2.5 mt-2 sm:mt-0"
+              >
+                Thank you!
+              </button>
+              <button type="button" class="md:hidden px-1.5 sm:mt-0">
+                <BsFillArrowRightCircleFill size={25} color={"white"} />
+              </button>
+            </>
+          )}
+        </form>
       </div>
       <footer className="bg-transparent pt-10 lg:pt-16 px-0 sm:px-20">
         <div className="flex flex-wrap justify-center md:justify-between px-5">
@@ -143,5 +198,5 @@ export function FooterLandingPage() {
       </footer>
     </div>
   );
-} 
+}
 export default FooterLandingPage;
