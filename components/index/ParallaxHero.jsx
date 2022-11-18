@@ -37,20 +37,20 @@ export default function ParallaxHero() {
                 kinds.
               </p>
               <div className="flex-col basis-full pt-5">
-                <button
-                  type="button"
+                <a
+                  href="https://www.kingdomly.app/"
                   class="text-white bg-amber-600 hover:bg-amber-500 font-medium rounded-lg shadow-lg 
                          text-xs lg:text-lg px-5 py-2.5 mr-2 mb-2  "
                 >
                   Lend Now
-                </button>
-                <button
-                  type="button"
+                </a>
+                <a
+                  href="https://www.kingdomly.app/"
                   class="text-white bg-green-900 hover:bg-green-800 font-medium rounded-lg shadow-lg 
                          text-xs lg:text-lg px-5 py-2.5 mr-2 mb-2  "
                 >
                   Rent Now
-                </button>
+                </a>
               </div>
             </div>
           </ParallaxBanner>
