@@ -44,7 +44,7 @@ export function FooterLandingPage() {
       }}
     >
       {/* FILLER DIV */}
-      <div className=" pt-20"    style={{
+      <div className=" py-20"    style={{
         backgroundColor:"#101819",
          backgroundImage: 'url("/assets/stars.png")',
       }}><div
@@ -108,8 +108,8 @@ export function FooterLandingPage() {
       </div>
       
       <footer className="bg-transparent pt-20 lg:pt-16 px-0 sm:px-20">
-        <div className="flex flex-wrap justify-center lg:justify-between">
-         <div className="basis-full lg:basis-[20%] flex">
+        <div className="flex flex-wrap">
+         <div className="basis-full lg:basis-[20%] flex mb-2">
           <a
             href="#"
             className="flex justify-start basis-full pb-3 sm:pb-0 md:basis-0"
@@ -124,40 +124,41 @@ export function FooterLandingPage() {
             </span>
           </a>
           </div>
-           <div className="basis-full lg:basis-[25%] flex flex-wrap ">
+           <div className="basis-full lg:basis-[25%] flex flex-wrap mb-4">
    
-            <h3 className="basis-full  text-xl text-white font-semibold mb-2">
+            <h3 className="basis-full  text-xl text-white font-semibold ">
               Company
             </h3>
+            
                   <a
                 href="#about"
-                className="basis-full text-white mr-3 text-xs sm:text-base lg:text-lg hover:underline md:mr-6"
+                className="text-white mr-3 text-xs sm:text-base lg:text-lg hover:underline md:mr-6"
               >
                 About
               </a>
                 <a
                 href="#rentals"
-                className="basis-full text-white mr-3 text-xs sm:text-base lg:text-lg hover:underline md:mr-6 "
+                className="text-white mr-3 text-xs sm:text-base lg:text-lg hover:underline md:mr-6 "
               >
                 Rentals
               </a>
 
                 <a
                 href="#roadmap"
-                className="basis-full text-white text-xs sm:text-base lg:text-lg hover:underline mr-3 md:mr-6"
+                className="text-white text-xs sm:text-base lg:text-lg hover:underline mr-3 md:mr-6"
               >
                 Roadmap
               </a>
 
                  <a
                 href="#/"
-                className="basis-full text-white mt-1 md:mt-0 flex items-center text-xs sm:text-base lg:text-lg hover:underline"
+                className="text-white md:mt-0 flex items-center text-xs sm:text-base lg:text-lg hover:underline"
               >
                 Docs
                 <BsBoxArrowUpRight size={12} className="ml-1" />
               </a>
           </div>
-           <div className="basis-full lg:basis-[25%] flex flex-wrap ">
+           <div className="basis-full lg:basis-[25%] flex flex-wrap mb-4">
    
             <h3 className="basis-full text-xl text-white font-semibold ">
               Social Media
@@ -203,9 +204,9 @@ export function FooterLandingPage() {
         </div>
           </div>
 
-          <div className="basis-full lg:basis-[25%] flex flex-wrap ">
+          <div className="basis-full lg:basis-[25%] flex flex-wrap mb-4">
    
-            <h3 className="basis-full text-xl text-white font-semibold mb-2">
+            <h3 className="basis-full text-xl text-white font-semibold ">
               Contact Us
             </h3>
             <p className="text-white">kingdomlyemail@gmail.com</p>
