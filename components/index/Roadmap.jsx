@@ -3,8 +3,8 @@ export default function Roadmap() {
     <div
       className="h-fit p-10 md:p-20 bg-cover"
       style={{
-        backgroundColor: "#122620",
-        backgroundImage: 'url("/assets/bg-roadmap.png")',
+        backgroundColor: "#141e1f",
+        backgroundImage: 'url("/assets/maplayer.png")',
       }}
       id="roadmap"
     > 

@@ -4,7 +4,7 @@ export function NavbarLandingPage() {
   const [navbarOpen, setNavbarOpen] = useState(true);
   return (
     <>
-      <nav className="bg-transparent px-10 mdlg:px-20 py-2">
+      <nav className="bg-[#141E1F] px-10 mdlg:px-20 py-2">
         <div className="flex flex-wrap justify-between items-center mx-auto">
           <a href="#/" className="flex items-center">
             <img
