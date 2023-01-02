@@ -64,12 +64,13 @@ export function FooterLandingPage() {
           onSubmit={handleSubmit}
           className="w-1/2 flex flex-wrap justify-center lg:justify-between"
         >
+          <p className="flex items-center text-[#969696] bg-[#272F30] rounded-l-lg px-2 font-bold">@</p>
           <input
             type="text"
             autoComplete="email"
             id="email"
             name="email"
-            className="bg-[#272F30] placeholder:text-[#969696] font-normal text-white text-xs md:text-sm rounded-lg   grow   p-2.5 mx-2 shadow-md"
+            className="bg-[#272F30] placeholder:text-[#969696] font-normal text-white text-xs md:text-sm rounded-r-lg   grow   p-2.5 mr-2 shadow-md"
             placeholder="Enter your e-mail"
             required
             onChange={(e) => setEmail(e.target.value)}
