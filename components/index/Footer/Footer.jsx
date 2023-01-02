@@ -70,7 +70,7 @@ export function FooterLandingPage() {
             autoComplete="email"
             id="email"
             name="email"
-            className="bg-[#272F30] placeholder:text-[#969696] font-normal text-white text-xs md:text-sm rounded-r-lg   grow   p-2.5 mr-2 shadow-md"
+            className="bg-[#272F30] placeholder:text-[#969696] font-normal text-white text-xs md:text-sm rounded-r-lg outline-0  grow  pl-0  p-2.5 mr-2 "
             placeholder="Enter your e-mail"
             required
             onChange={(e) => setEmail(e.target.value)}
