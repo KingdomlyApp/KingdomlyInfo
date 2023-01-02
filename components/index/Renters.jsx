@@ -7,8 +7,8 @@ export default function Renters() {
       id="rentals"
     >
       <div className="flex justify-center">
-        <strong className="text-white text-3xl sm:text-5xl text-center">
-          HOW WE DO RENTALS
+        <strong className="text-white text-3xl sm:text-5xl text-center my-[10vh]">
+          How We Do Rentals
         </strong>
       </div>
       <div className="flex flex-wrap justify-center">

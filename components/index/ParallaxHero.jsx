@@ -18,23 +18,26 @@ export default function ParallaxHero() {
         <NavbarLandingPage />
         <ParallaxContainer>
           <ParallaxBanner className="aspect-[2/1]">
-               <ParallaxBannerLayer image="/assets/accent3v2.png" speed={-18} />
-             <ParallaxBannerLayer image="/assets/accent2v2.png" speed={-18} />
-            <ParallaxBannerLayer image="/assets/accent1v2.png" speed={-22} />
-            <ParallaxBannerLayer image="/assets/grass2v2.png" speed={-12} />
-            <ParallaxBannerLayer image="/assets/grass1v2.png" speed={-6} /> 
-            <ParallaxBannerLayer className="castle" image="/assets/castlev2.png" speed={-2} />
+             {/* <img src="/assets/castle.svg" alt="" className="absolute z-50" /> */}
+               <ParallaxBannerLayer image="/assets/accent3v2.png"   speed={-18} />
+             <ParallaxBannerLayer image="/assets/accent2v2.png"   speed={-18} />
+            <ParallaxBannerLayer image="/assets/accent1v2.png"   speed={-22} />
+            <ParallaxBannerLayer image="/assets/grass2v2.png"  speed={-12} />
+                   <img src="/assets/castle.svg" className="absolute h-[90%] xs:right-[5%] xs:bottom-[5%] md:right-[8%]  md:bottom-[7%] lg:right-[8%] lg:bottom-[7%]"  alt="" />
+            <ParallaxBannerLayer image="/assets/grass1v2.png"  speed={-6} /> 
+   
+        
   
-            <div className="flex flex-row flex-wrap translate-y-10 xs:pl-8 md:pl-40 md:pt-20">
+            <div className="flex flex-row flex-wrap translate-y-10 xs:pl-8 md:pl-40 md:pt-20 z-50">
               <h1 className="text-xl xs:text-3xl md:text-4xl lg:text-8xl text-white font-bold drop-shadow-lg">
                 Dare to join <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F0DC22] to-[#CE8E15]">Metaverse <br /> Royalty?</span>
               </h1>
          
-              <div className="md:mt-4 flex-col basis-full pt-5">
+              <div className="xs:mt-8 md:mt-16 flex-col basis-full ">
                 <a
                   href="https://www.kingdomly.app/"
-                  class="text-[#A68A27] border border-[#A68A27] border-2 hover:bg-[#A68A27] hover:text-white font-medium rounded-lg shadow-lg 
+                  class="basis-2/6 text-[#A68A27] border border-[#A68A27] border-2 hover:bg-[#A68A27] hover:text-white xs:text-md md:text-xl font-medium rounded-lg shadow-lg 
                     xs:p-1   md:px-5 md:py-2.5"
                 >
                   Into the Fray

@@ -10,9 +10,9 @@ export default function Lenders() {
         }}
         id="about"
       >
-        <div className="flex justify-center mt-[14vh]">
+        <div className="flex justify-center mt-[20vh] mb-[10vh]">
           <strong className="text-white text-3xl sm:text-5xl text-center">
-            WHAT WE OFFER
+            What We Offer
           </strong>
         </div>
         <div className="flex flex-wrap justify-center items-start pt-10 pb-20">
