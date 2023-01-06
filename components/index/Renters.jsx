@@ -2,20 +2,20 @@ import RentalItem from "./Rentals/RentalItem";
 export default function Renters() {
   return (
     <div
-      className="vertical py-[10vh] lg:pb-[20vh] px-10 md:px-15 lg:px-20"
-      style={{ backgroundColor: "#0B1814" }}
+      className="bg-[#121B1C] vertical py-[10vh] lg:pb-[20vh] px-10 md:px-15 lg:px-52"
+    
       id="rentals"
     >
       <div className="flex justify-center">
-        <strong className="text-white text-3xl sm:text-5xl text-center">
-          RENTALS
+        <strong className="text-white text-3xl sm:text-5xl text-center my-[10vh]">
+          How We Do Rentals
         </strong>
       </div>
       <div className="flex flex-wrap justify-center">
         <RentalItem
           title={"Your one stop shop for NFT renting."}
           content={[
-            "As the “Borrower”, simply specify the amount of days that you’d like to borrow an NFT for and you’re good to go.",
+            "As a Renter, simply specify the amount of days you’d like to borrow an NFT for and you’re good to go.",
             "The “Lender’s” set rental price is multiplied by the amount of days that the “Borrower” sets and is sent to the “Lender” upon purchase of the rental.",
           ]}
           image={"/assets/card-1.png"}

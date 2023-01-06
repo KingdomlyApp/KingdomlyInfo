@@ -5,51 +5,41 @@ export default function Lenders() {
       <div
         className="vertical pt-[10vh] md:pt-[10vh] px-10 md:px-20  "
         style={{
-          backgroundColor: "#122620",
-          backgroundImage: 'url("/assets/bg-wwo.png")',
+          backgroundColor: "#0e1616",
+  
         }}
         id="about"
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-[20vh] mb-[10vh]">
           <strong className="text-white text-3xl sm:text-5xl text-center">
-            WHAT WE OFFER
+            What We Offer
           </strong>
         </div>
         <div className="flex flex-wrap justify-center items-start pt-10 pb-20">
           <LenderItem
-            index={1}
-            content={"Low risk, high reward"}
-            extended={
-              "With Kingdomly any player can try any game at a fraction of the cost, learning and growing in their enjoyment of such games before they decide to make a full purchase themselves."
-            }
+      
+            content={"/assets/offer1.png"}
+           
           />
           <LenderItem
-            index={2}
-            content={"No more NFT cold starts!"}
-            extended={
-              "Most NFT launches encounter cold-starts caused by extremely low or high minting prices. Lending and renting protocols help smooth out these factors by giving alternative methods for earning liquidity, this in turn helps floor prices."
-            }
+      
+            content={"/assets/offer2.png"}
+           
           />
           <LenderItem
-            index={3}
-            content={"Enlist any NFT!"}
-            extended={
-              "Kingdomly’s Protocol v1 enables decentralized peer to peer renting of ERC-721 and ERC-1155 non-fungible tokens (NFTs), similar to OpenSeas NFT marketplace but for rentals"
-            }
+      
+            content={"/assets/offer3.png"}
+           
           />
-          <LenderItem
-            index={4}
-            content={"Your NFT, your rules."}
-            extended={
-              ' Lending implies safely transferring true “usership” rights to the borrower, The NFT "Lender" is the one to set the rules on how long someone can have it for rent, and how much it will cost. '
-            }
+     <LenderItem
+      
+            content={"/assets/offer4.png"}
+           
           />
-          <LenderItem
-            index={5}
-            content={"Open for all!"}
-            extended={
-              "Anyone with NFTs can join and lease their assets with no limitations on how many they want to lease!"
-            }
+            <LenderItem
+      
+            content={"/assets/offer5.png"}
+           
           />
         </div>
       </div>

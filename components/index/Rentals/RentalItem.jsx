@@ -5,33 +5,41 @@ import { FaUserClock, FaFileSignature, FaBalanceScale } from "react-icons/fa";
 
 export default function RentalItem({ reverse, content, title, image, icons }) {
   var classOrder =
-    "flex justify-end order-first md:order-none h-fit pl-0 md:ml-0";
-  if (reverse) {
-    classOrder = "flex justify-start order-first h-fit";
+    "flex justify-center items-center align-center order-first md:order-none h-fit pl-0 md:ml-0";
+  if (!reverse) {
+    classOrder = "flex justify-center xl:order-last h-fit";
   }
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 place-content-center gap-5 my-10 lg:my-[5.5rem]"
-      style={{ backgroundColor: "#0B1814" }}
+      className="flex flex-col xl:flex-row items-center justify-center gap-8 my-10 lg:my-[5.5rem]"
+    
     >
-      <div className="grid grid-cols-2 gap-5 grid-flow-row place-content-center px-4">
+       <div className={classOrder}>
+        <img
+          src={image}
+          className="object-contain h-60 md:h-80 xl:h-[40vh]"
+          alt="Card"
+        />
+      </div>
+      <div className="basis-full xl:basis-1/2  gap-5 grid-flow-row place-content-center">
         <div className="col-span-2 text-center md:text-start mb-5 md:mb-10">
-          <strong className="text-white text-base md:text-xl lg:text-3xl text-color-main ">
+          <strong className="text-white text-base md:text-xl lg:text-3xl ">
             {title}
           </strong>
         </div>
-        <div className="col-span-2 md:col-span-1 block mb-5 md:mb-0">
+        <div className="col-span-2 grid grid-cols-2 bg-[#0e1616] p-12 gap-5 rounded-lg">
+        <div className="col-span-2 md:col-span-1 block mb-5 md:mb-0 border-b md:border-b-0 pb-16 md:pb-0 md:border-r">
           {icons === 1 ? (
             //FIRST ICONS
             //First section
-            <FaUserClock size={25} className="mb-5" color="white" />
+              <img src={"/assets/offericons/timer.png"} alt=""  className="block h-10 m-2"/>
           ) : icons === 2 ? (
             //Second section
-            <FaFileSignature size={25} className="mb-5" color="white" />
+            <img src={"/assets/offericons/secure.png"} alt=""  className="block h-10 m-2"/>
           ) : (
             //Third section
 
-            <BiTransferAlt size={25} className="mb-5" color="white" />
+             <img src={"/assets/offericons/p2p.png"} alt=""  className="block h-10 m-2"/>
           )}
           <p className="text-white text-xs lg:text-base xl:text-lg font-normal">
             {content[0]}
@@ -41,26 +49,22 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
           {icons === 1 ? (
             //SECOND ICONS
             //First section
-            <MdPriceCheck size={25} className="mb-5" color="white" />
+           <img src={"/assets/offericons/Bag.png"} alt=""  className="block h-10 m-2"/>
           ) : icons === 2 ? (
             //Second section
-            <BsFillCalendarCheckFill size={25} className="mb-5" color="white" />
+            <img src={"/assets/offericons/atomic.png"} alt=""  className="block h-10 m-2"/>
           ) : (
             //Third section
-            <FaBalanceScale size={25} className="mb-5" color="white" />
+            <img src={"/assets/offericons/libra.png"} alt=""  className="block h-10 m-2"/>
           )}
           <p className="text-white text-xs lg:text-base xl:text-lg font-normal">
             {content[1]}
           </p>
         </div>
+        </div>
       </div>
-      <div className={classOrder}>
-        <img
-          src={image}
-          className="object-contain img-float aspect-[1.618] sm:aspect-[1.52] md:aspect-[1.25]"
-          alt="Card"
-        />
-      </div>
+      
+     
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { ParallaxContainer } from "./Parallax/Container";
 import { Parallax } from "react-scroll-parallax";
-import castle from "../../public/assets/kf-10.png";
-
+import Sparkles from "../../public/assets/sparkles.png";
 import NavbarLandingPage from "./Navbar/Navbar";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
@@ -9,55 +8,58 @@ export default function ParallaxHero() {
   return (
     <>
       <div
-        className="hidden landscape:block sm:block bg-cover bg-center h-fit"
+        className=" landscape:block sm:block bg-cover bg-center h-fit "
         style={{
-          backgroundImage: 'url("/assets/kf-2.png")',
+
           backgroundSize: "cover",
+        
         }}
       >
         <NavbarLandingPage />
         <ParallaxContainer>
           <ParallaxBanner className="aspect-[2/1]">
-            <ParallaxBannerLayer image="/assets/kf-50.png" speed={-22} />
-            <ParallaxBannerLayer image="/assets/kf-60.png" speed={-12} />
-            <ParallaxBannerLayer image="/assets/kf-80.png" speed={-6} />
-            <ParallaxBannerLayer image="/assets/kf-10.png" speed={-2} />
-            <ParallaxBannerLayer image="/assets/kf-100.png" speed={5} />
-            <div className="flex flex-row flex-wrap translate-y-10 items-center mx-10 md:mx-20 w-1/2">
-              <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl text-color-secondary font-bold drop-shadow-lg">
-                Adventure into Metaverse Royalty.
+             {/* <img src="/assets/castle.svg" alt="" className="absolute z-50" /> */}
+               <ParallaxBannerLayer image="/assets/accent3v2.png"   speed={-18} />
+             <ParallaxBannerLayer image="/assets/accent2v2.png"   speed={-18} />
+            <ParallaxBannerLayer image="/assets/accent1v2.png"   speed={-22} />
+            <ParallaxBannerLayer image="/assets/grass2v2.png"  speed={-12} />
+                   <img src="/assets/castle.svg" className="absolute h-[90%] xs:right-[5%] xs:bottom-[5%] md:right-[8%]  md:bottom-[7%] lg:right-[8%] lg:bottom-[7%]"  alt="" />
+            <ParallaxBannerLayer image="/assets/grass1v2.png"  speed={-6} /> 
+   
+        
+  
+            <div className="flex flex-row flex-wrap translate-y-10 xs:pl-8 md:pl-40 md:pt-20 z-50">
+              <h1 className="text-xl xs:text-3xl md:text-4xl lg:text-8xl text-white font-bold drop-shadow-lg">
+                Dare to join <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F0DC22] to-[#CE8E15]">Metaverse <br /> Royalty?</span>
               </h1>
-              <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg pt-5">
-                Kingdomly is a platform for borrowing and lending NFT’s. With
-                Kingdomly anyone can seamlessly lend their NFT’s and earn
-                interest while hodling. We give crypto enthusiasts the
-                opportunity to access new NFT experiences without making the
-                commitment of a full price purchase. Our initial focus is
-                gaming, but it is our desire to empower NFT experiences of all
-                kinds.
-              </p>
-              <div className="flex-col basis-full pt-5">
+         
+              <div className="xs:mt-8 md:mt-16 flex-col basis-full ">
                 <a
                   href="https://www.kingdomly.app/"
-                  class="text-white bg-amber-600 hover:bg-amber-500 font-medium rounded-lg shadow-lg 
-                         text-xs lg:text-lg px-5 py-2.5 mr-2 mb-2  "
+                  class="basis-2/6 text-[#A68A27] border border-[#A68A27] border-2 hover:bg-[#A68A27] hover:text-white xs:text-md md:text-xl font-medium rounded-lg shadow-lg 
+                    xs:p-1   md:px-5 md:py-2.5"
                 >
-                  Lend Now
+                  Into the Fray
                 </a>
-                <a
-                  href="https://www.kingdomly.app/"
-                  class="text-white bg-green-900 hover:bg-green-800 font-medium rounded-lg shadow-lg 
-                         text-xs lg:text-lg px-5 py-2.5 mr-2 mb-2  "
-                >
-                  Rent Now
-                </a>
+          
               </div>
             </div>
           </ParallaxBanner>
         </ParallaxContainer>
+      <div className="mb-[-16vh] flex  w-full justify-center xs:pb-4 md:pb-0">
+        <div className="flex flex-wrap bg-[#293132] rounded-3xl basis-[80%] ">
+         
+         <div className="basis-full lg:basis-1/2  xs:p-8 xl:p-20"> <h1 className="block text-white text-xs xl:text-xl">Seamlessly lend NFTs and earn interest while holding! In Kingdomly, we allow crypto enthusiasts the opportunity to access new experiences without making the commitment to a full price purchase!</h1>
+          </div>
+          <div className="flex basis-full lg:basis-1/2 xs:justify-center xl:justify-end xl:pr-8 items-center"><img src="/assets/sparkles.png" className="hidden md:block sm:h-[80%] lg:h-[70%] xl:h-[90%]" alt="sd" /></div>
+          </div>
+      </div>
       </div>
 
-      <div
+  
+
+      {/* <div
         className="landscape:hidden sm:hidden h-[595px] xs:h-[700px] xsm:h-[920px] sm:h-[765px] bg-cover bg-center"
         style={{
           backgroundImage: 'url("/assets/md-hero.png")',
@@ -83,7 +85,7 @@ export default function ParallaxHero() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

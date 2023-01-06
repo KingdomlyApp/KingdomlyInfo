@@ -7,7 +7,7 @@ import FooterLandingPage from "../components/index/Footer/Footer";
 export default function Home() {
   return (
     <>
-      {/* <--NAV & HERO--> */} 
+      {/* <--NAV & HERO--> */}
       <ParallaxHero />
 
       {/* <--LENDERS--> */}

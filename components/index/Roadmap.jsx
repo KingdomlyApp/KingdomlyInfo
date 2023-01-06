@@ -3,13 +3,13 @@ export default function Roadmap() {
     <div
       className="h-fit p-10 md:p-20 bg-cover"
       style={{
-        backgroundColor: "#122620",
-        backgroundImage: 'url("/assets/bg-roadmap.png")',
+        backgroundColor: "#141e1f",
+        backgroundImage: 'url("/assets/maplayer.png")',
       }}
       id="roadmap"
     > 
       <div className="flex flex-wrap justify-center">
-        <strong className="text-white text-3xl sm:text-5xl text-center basis-full pb-10">
+        <strong className="text-white text-3xl sm:text-5xl text-center basis-full pb-10 my-[10vh]">
           ROADMAP
         </strong>
         <div className="flex items-center">
