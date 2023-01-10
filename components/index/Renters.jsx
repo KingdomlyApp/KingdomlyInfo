@@ -2,12 +2,11 @@ import RentalItem from "./Rentals/RentalItem";
 export default function Renters() {
   return (
     <div
-      className="bg-[#121B1C] vertical py-[10vh] lg:pb-[20vh] px-10 md:px-15 lg:px-52"
-    
+      className="bg-[#121B1C] vertical py-[12vh] lg:pb-[20vh] px-10"
       id="rentals"
     >
       <div className="flex justify-center">
-        <strong className="text-white text-3xl sm:text-5xl text-center my-[10vh]">
+        <strong className="text-white text-3xl xs:text-5xl text-center ">
           How We Do Rentals
         </strong>
       </div>

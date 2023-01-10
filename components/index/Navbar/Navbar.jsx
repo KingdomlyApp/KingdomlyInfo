@@ -4,7 +4,7 @@ export function NavbarLandingPage() {
   const [navbarOpen, setNavbarOpen] = useState(true);
   return (
     <>
-      <nav className="bg-[#141E1F] px-10 mdlg:px-20 py-2">
+      <nav className="bg-transparent px-10 mdlg:px-20 py-2">
         <div className="flex flex-wrap justify-between items-center mx-auto">
           <a href="#/" className="flex items-center">
             <img
@@ -20,7 +20,7 @@ export function NavbarLandingPage() {
             <button
               data-collapse-toggle="navbar-cta"
               type="button"
-              className="inline-flex items-center p-2 text-sm text-white rounded-lg mdlg:hidden hover:text-green-900"
+              className="inline-flex items-center p-2 text-sm text-white rounded-lg mdlg:hidden hover:text-yellow-400"
               aria-controls="navbar-cta"
               aria-expanded="false"
               onClick={() => {
@@ -56,7 +56,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#about"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
                 >
                   About
                 </a>
@@ -64,7 +64,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#rentals"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:hover:bg-transparent mdlg:hover:text-green-900 mdlg:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
                 >
                   Rentals
                 </a>
@@ -72,23 +72,25 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="#roadmap"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:hover:bg-transparent mdlg:hover:text-green-900 mdlg:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
                 >
                   Roadmap
                 </a>
               </li>
               <li>
                 <a
-                  href="#contactus"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:hover:bg-transparent mdlg:hover:text-green-900 mdlg:p-0 drop-shadow-lg"
+                  target="_blank"
+                  href="https://community.kingdomly.app/"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
                 >
                   Community
                 </a>
               </li>
               <li>
                 <a
-                  href="#about"
-                  className="flex items-center py-2 pr-4 pl-3 text-white hover:text-green-900 mdlg:p-0 drop-shadow-lg"
+                  target="_blank"
+                  href="https://docs.kingdomly.app/"
+                  className="flex items-center py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
                 >
                   Docs {"\xa0"}
                   <BsBoxArrowUpRight size={15} />
@@ -100,5 +102,5 @@ export function NavbarLandingPage() {
       </nav>
     </>
   );
-} 
+}
 export default NavbarLandingPage;

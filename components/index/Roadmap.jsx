@@ -9,7 +9,7 @@ export default function Roadmap() {
       id="roadmap"
     > 
       <div className="flex flex-wrap justify-center">
-        <strong className="text-white text-3xl sm:text-5xl text-center basis-full pb-10 my-[10vh]">
+        <strong className="text-white text-3xl sm:text-5xl text-center basis-full my-[10vh]">
           ROADMAP
         </strong>
         <div className="flex items-center">
