@@ -79,6 +79,7 @@ export function NavbarLandingPage() {
               </li>
               <li>
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://community.kingdomly.app/"
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
@@ -88,6 +89,7 @@ export function NavbarLandingPage() {
               </li>
               <li>
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://docs.kingdomly.app/"
                   className="flex items-center py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
