@@ -1,9 +1,29 @@
+import Head from "next/head";
 import Script from "next/script";
 import "../styles/globals.css";
 import "../styles/hero.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gtag.GOOGLE_ANALYTICS}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </Head>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GOOGLE_ANALYTICS}`}
+      />
       <Script
         id="gtag-base"
         strategy="afterInteractive"
