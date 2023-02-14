@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 export function NavbarLandingPage() {
   const [navbarOpen, setNavbarOpen] = useState(true);
+
+  useEffect(() => {
+    let url = window.location.href.split("/");
+    let target = url[url.length - 1].toLowerCase();
+    let element = document.getElementById(target);
+    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <>
       <nav className="bg-transparent px-10 mdlg:px-20 py-2">
@@ -55,24 +63,39 @@ export function NavbarLandingPage() {
             <ul className="flex flex-col p-4 bg-transparent mdlg:flex-row mdlg:space-x-8 mdlg:mt-0 text-sm mdlg:text-base mdlg:font-medium ">
               <li>
                 <a
-                  href="#about"
+                  href="https://kingdomly.app/"
+                  target="_blank"
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
                 >
-                  About
+                  App
                 </a>
               </li>
               <li>
                 <a
-                  href="#rentals"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg cursor-pointer"
+                  onClick={() => {
+                    let rentals = document.getElementById("rentals");
+                    rentals &&
+                      rentals.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                  }}
                 >
                   Rentals
                 </a>
               </li>
               <li>
                 <a
-                  href="#roadmap"
-                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
+                  className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg cursor-pointer"
+                  onClick={() => {
+                    let roadmap = document.getElementById("roadmap");
+                    roadmap &&
+                      roadmap.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                  }}
                 >
                   Roadmap
                 </a>
@@ -81,7 +104,7 @@ export function NavbarLandingPage() {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://community.kingdomly.app/"
+                  href="https://www.kingdomly.app/community/0xfd72c8923ef3236aff248aaaecda956e78824a95"
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
                 >
                   Community
