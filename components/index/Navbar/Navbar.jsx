@@ -64,6 +64,7 @@ export function NavbarLandingPage() {
               <li>
                 <a
                   href="https://kingdomly.app/"
+                  rel="noreferrer"
                   target="_blank"
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
                 >
