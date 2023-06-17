@@ -1,7 +1,22 @@
 import { useState, useEffect } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import Hamburger from "./Hamburger";
+import { motion, AnimatePresence } from "framer-motion";
+
 export function NavbarLandingPage() {
-  const [navbarOpen, setNavbarOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  const hiddenVariants = {
+    visible: {
+      transition: { staggerChildren: 0.1, duration: 0.3 },
+      y: 0,
+    },
+    hidden: typeof window !== "undefined" &&
+      window.innerWidth < 1024 && {
+        y: -window.innerHeight,
+      },
+  };
 
   useEffect(() => {
     let url = window.location.href.split("/");
@@ -10,58 +25,167 @@ export function NavbarLandingPage() {
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
+  // To toggle bg opacity
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+
+      if (scrollTop > 0 && !scroll) {
+        setScroll(true);
+      } else if (scrollTop === 0 && scroll) {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scroll]);
+
   return (
     <>
-      <nav className="bg-transparent px-10 mdlg:px-20 py-2">
-        <div className="flex flex-wrap justify-between items-center mx-auto">
-          <a href="#/" className="flex items-center">
-            <img
-              src="/assets/logo.png"
-              className="mr-3 h-6 sm:h-9"
-              alt="Kingdomly Logo"
-            />
-            <span className="self-center text-2xl text-white font-bold whitespace-nowrap ">
-              Kingdomly
-            </span>
-          </a>
-          <div className="flex mdlg:order-2">
-            <button
-              data-collapse-toggle="navbar-cta"
-              type="button"
-              className="inline-flex items-center p-2 text-sm text-white rounded-lg mdlg:hidden hover:text-yellow-400"
-              aria-controls="navbar-cta"
-              aria-expanded="false"
-              onClick={() => {
-                if (navbarOpen) {
-                  setNavbarOpen(false);
-                } else {
-                  setNavbarOpen(true);
-                }
-              }}
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Hamburger */}
-                <path
-                  fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div
-            className="justify-between items-center mdlg:flex w-full mdlg:w-auto mdlg:order-2 bg-black mdlg:bg-transparent mt-2 mdlg:mt-0 bg-opacity-20 rounded-lg"
-            hidden={navbarOpen}
+      <header
+        className={`padding ${
+          scroll ? "bg-black bg-opacity-20 backdrop-blur-sm " : "bg-transparent"
+        }  duration-500 z-[1000] fixed w-full top-0 left-0 text-white shadow items-center flex justify-between py-2 md:py-4 `}
+      >
+        <a href="#/" className="flex z-10 items-center">
+          <img
+            src="/assets/logo.png"
+            className="mr-3 h-6 sm:h-9"
+            alt="Kingdomly Logo"
+          />
+          <span className="self-center mix-blend-difference text-2xl text-white font-bold whitespace-nowrap ">
+            Kingdomly
+          </span>
+        </a>
+        {/* Laptop */}
+        <AnimatePresence>
+          <motion.ul
+            key={isOpen}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={hiddenVariants}
+            transition={{ duration: 0.5 }}
+            className=" hidden lg:flex gap-8 text-lg font-medium "
           >
-            <ul className="flex flex-col p-4 bg-transparent mdlg:flex-row mdlg:space-x-8 mdlg:mt-0 text-sm mdlg:text-base mdlg:font-medium ">
-              <li>
+            <motion.li
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: -50 },
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <a
+                href="https://kingdomly.app/"
+                rel="noreferrer"
+                target="_blank"
+                className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
+              >
+                App
+              </a>
+            </motion.li>
+            <motion.li
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: -60 },
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <a
+                className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg cursor-pointer"
+                onClick={() => {
+                  let rentals = document.getElementById("rentals");
+                  setIsOpen(false);
+                  rentals &&
+                    rentals.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
+                Rentals
+              </a>
+            </motion.li>
+            <motion.li
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: -70 },
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <a
+                className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg cursor-pointer"
+                onClick={() => {
+                  setIsOpen(false);
+                  let roadmap = document.getElementById("roadmap");
+                  roadmap &&
+                    roadmap.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
+                Roadmap
+              </a>
+            </motion.li>
+            <motion.li
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: -70 },
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.kingdomly.app/community/0xfd72c8923ef3236aff248aaaecda956e78824a95"
+                className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
+              >
+                Community
+              </a>
+            </motion.li>
+            <motion.li
+              variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: -70 },
+              }}
+              transition={{ duration: 0.5 }}
+            >
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://docs.kingdomly.app/"
+                className="flex items-center py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
+              >
+                Docs {"\xa0"}
+                <BsBoxArrowUpRight size={15} />
+              </a>
+            </motion.li>
+          </motion.ul>
+        </AnimatePresence>
+        {/* Mobile and Tablet  */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.ul
+              key={isOpen}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={hiddenVariants}
+              transition={{ duration: 0.5 }}
+              className="flex lg:hidden xs:gap-8 font-semibold lg:h-auto lg:py-0 lg:relative duration-300 h-screen left-0 lg:bg-transparent bg-secondary py-4 pb-6 text-black items-center justify-center lg:text-white absolute top-0 text-center flex-col lg:flex-row text-2xl opacity-1 lg:font-medium w-full gap-3 md:gap-16  lg:gap-16 "
+            >
+              <motion.li
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: -50 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
                 <a
                   href="https://kingdomly.app/"
                   rel="noreferrer"
@@ -70,12 +194,19 @@ export function NavbarLandingPage() {
                 >
                   App
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: -60 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
                 <a
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg cursor-pointer"
                   onClick={() => {
                     let rentals = document.getElementById("rentals");
+                    setIsOpen(false);
                     rentals &&
                       rentals.scrollIntoView({
                         behavior: "smooth",
@@ -85,11 +216,18 @@ export function NavbarLandingPage() {
                 >
                   Rentals
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: -70 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
                 <a
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg cursor-pointer"
                   onClick={() => {
+                    setIsOpen(false);
                     let roadmap = document.getElementById("roadmap");
                     roadmap &&
                       roadmap.scrollIntoView({
@@ -100,8 +238,14 @@ export function NavbarLandingPage() {
                 >
                   Roadmap
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: -70 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
                 <a
                   rel="noreferrer"
                   target="_blank"
@@ -110,8 +254,14 @@ export function NavbarLandingPage() {
                 >
                   Community
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: -70 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
                 <a
                   rel="noreferrer"
                   target="_blank"
@@ -121,11 +271,19 @@ export function NavbarLandingPage() {
                   Docs {"\xa0"}
                   <BsBoxArrowUpRight size={15} />
                 </a>
-              </li>
-            </ul>
-          </div>
+              </motion.li>
+            </motion.ul>
+          )}
+        </AnimatePresence>
+        <div className="z-10 lg:hidden">
+          <Hamburger
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+            }}
+            isOpen={isOpen}
+          />
         </div>
-      </nav>
+      </header>
     </>
   );
 }

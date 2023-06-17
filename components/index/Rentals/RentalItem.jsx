@@ -14,7 +14,7 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
       <div className={classOrder}>
         <img
           src={image}
-          className="object-contain h-60 md:h-80 xl:h-[60vh]"
+          className=" animatedImg object-contain h-60 md:h-80 xl:h-[60vh]"
           alt="Card"
         />
       </div>
@@ -78,7 +78,7 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
                 className="block h-10 m-2"
               />
             )}
-             <p className="text-white text-xs sm:text-base xl:text-lg font-normal">
+            <p className="text-white text-xs sm:text-base xl:text-lg font-normal">
               {content[1]}
             </p>
           </div>

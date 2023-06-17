@@ -78,11 +78,11 @@ export function FooterLandingPage() {
               <>
                 <button
                   type="submit"
-                  class="hidden md:block text-[#A68A27] border border-[#A68A27] hover:bg-[#A68A27] hover:text-white  font-bold rounded-lg shadow-lg text-sm  lg:basis-[10%] px-3 py-2.5 "
+                  className="hidden md:block text-[#A68A27] border border-[#A68A27] hover:bg-[#A68A27] hover:text-white  font-bold rounded-lg shadow-lg text-sm  lg:basis-[10%] px-3 py-2.5 "
                 >
                   →
                 </button>
-                <button type="submit" class="md:hidden px-1.5  mt-0">
+                <button type="submit" className="md:hidden px-1.5  mt-0">
                   <BsFillArrowRightCircleFill size={25} color={"#A68A27"} />
                 </button>
               </>
@@ -90,11 +90,11 @@ export function FooterLandingPage() {
               <>
                 <button
                   type="button"
-                  class="hidden md:block text-white font-semibold bg-[#A68A27] hover:bg-amber-200 rounded-lg shadow-lg text-sm px-3 py-2.5 "
+                  className="hidden md:block text-white font-semibold bg-[#A68A27] hover:bg-amber-200 rounded-lg shadow-lg text-sm px-3 py-2.5 "
                 >
                   Thank you!
                 </button>
-                <button type="button" class="md:hidden px-1.5 sm:mt-0">
+                <button type="button" className="md:hidden px-1.5 sm:mt-0">
                   <BsFillArrowRightCircleFill size={25} color={"#A68A27"} />
                 </button>
               </>
