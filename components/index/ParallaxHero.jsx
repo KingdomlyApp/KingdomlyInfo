@@ -11,7 +11,7 @@ export default function ParallaxHero() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function ParallaxHero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-              className="flex flex-row flex-wrap translate-y-1 pt-6 sm:pt-20 pl-14 lg:pl-20 xl:pl-40 z-50"
+              className="flex flex-row flex-wrap translate-y-1 pt-6 sm:pt-20 pl-5 lg:pl-20 xl:pl-40 z-50"
             >
               <h1 className="text-2xl xs:text-4xl sm:text-6xl lg:text-8xl text-white font-bold drop-shadow-lg">
                 Dare to join <br />
@@ -85,17 +85,17 @@ export default function ParallaxHero() {
         </ParallaxContainer>
         <div
           id="about"
-          className="flex justify-center mt-[20vh] bg-gradient-to-b from-[#121B1C] via-[#0c1313] to-[#0c1313]"
+          className="flex justify-center mt-[20vh] bg-gradient-to-b px-5 from-[#121B1C] via-[#0c1313] to-[#0c1313]"
         >
           <motion.div
             ref={ref}
             initial="hidden"
             animate={controls}
             variants={animationVariants}
-            className="flex flex-wrap bg-[#293132] rounded-3xl basis-[80%]"
+            className="flex flex-wrap bg-[#293132] rounded-3xl basis-[100%] md:basis-[80%] "
           >
-            <div className="basis-full md:basis-1/2  p-8 xl:p-20">
-              <h1 className="block text-white text-xs md:text-base lg:text-lg xl:text-xl">
+            <div className="basis-full md:basis-1/2  p-8  xl:p-20">
+              <h1 className="block text-white text-sm md:text-base lg:text-lg xl:text-xl">
                 Seamlessly lend NFTs and earn interest while holding! In
                 Kingdomly, we allow crypto enthusiasts the opportunity to access
                 new experiences without making the commitment to a full price

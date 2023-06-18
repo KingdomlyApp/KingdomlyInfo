@@ -6,7 +6,7 @@ export default function Renters() {
       id="rentals"
     >
       <div className="flex justify-center">
-        <strong className="text-white text-3xl xs:text-5xl text-center ">
+        <strong className="text-white text-3xl xs:text-4xl md:text-5xl text-center ">
           How We Do Rentals
         </strong>
       </div>
