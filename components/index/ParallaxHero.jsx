@@ -63,7 +63,7 @@ export default function ParallaxHero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-              className="flex flex-row flex-wrap translate-y-1 pt-6 sm:pt-20 pl-5 lg:pl-20 xl:pl-40 z-50"
+              className="flex flex-row flex-wrap translate-y-1 pt-6 sm:pt-20 pl-5 md:pl-20 xl:pl-40 z-50"
             >
               <h1 className="text-2xl xs:text-4xl sm:text-6xl lg:text-8xl text-white font-bold drop-shadow-lg">
                 Dare to join <br />
@@ -85,13 +85,12 @@ export default function ParallaxHero() {
         </ParallaxContainer>
         <div
           id="about"
-          className="flex justify-center mt-[20vh] bg-gradient-to-b px-5 from-[#121B1C] via-[#0c1313] to-[#0c1313]"
+          className="flex justify-center mt-20 lg:mt-[20vh] bg-gradient-to-b px-5 from-[#121B1C] via-[#0c1313] to-[#0c1313]"
         >
           <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={animationVariants}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
             className="flex flex-wrap bg-[#293132] rounded-3xl basis-[100%] md:basis-[80%] "
           >
             <div className="basis-full md:basis-1/2  p-8  xl:p-20">
