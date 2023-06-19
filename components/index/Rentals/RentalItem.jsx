@@ -14,13 +14,13 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
       <div className={classOrder}>
         <img
           src={image}
-          className="object-contain h-60 md:h-80 xl:h-[60vh]"
+          className=" animatedImg object-contain h-60 md:h-80 xl:h-[60vh]"
           alt="Card"
         />
       </div>
       <div className="basis-full xl:basis-1/2  gap-5 grid-flow-row place-content-center">
         <div className="col-span-2 text-center md:text-start mb-5 md:mb-10">
-          <strong className="text-white text-base md:text-xl lg:text-3xl ">
+          <strong className="text-white text-lg md:text-xl lg:text-3xl ">
             {title}
           </strong>
         </div>
@@ -50,7 +50,7 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
                 className="block h-10 m-2"
               />
             )}
-            <p className="text-white text-xs sm:text-base xl:text-lg font-normal">
+            <p className="text-white text-base sm:text-lg xl:text-lg font-normal">
               {content[0]}
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function RentalItem({ reverse, content, title, image, icons }) {
                 className="block h-10 m-2"
               />
             )}
-             <p className="text-white text-xs sm:text-base xl:text-lg font-normal">
+            <p className="text-white text-base sm:text-lg xl:text-lg font-normal">
               {content[1]}
             </p>
           </div>

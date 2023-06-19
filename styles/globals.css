@@ -5,7 +5,7 @@
 @layer base {
   html {
     font-family: "Poppins", system-ui, sans-serif;
-    background-color: #121B1C;
+    background-color: #121b1c;
   }
 }
 
@@ -91,5 +91,88 @@ body {
   }
   100% {
     width: 90%;
+  }
+}
+
+/* General padding  */
+
+.padding {
+  @apply px-3 md:px-10 lg:px-20;
+}
+
+/* Hamburger Style Start */
+
+.hamburger line {
+  animation: to-open-icon 1s forwards;
+}
+
+button[aria-expanded="true"] line {
+  stroke-dashoffset: 79.9;
+  animation: to-close-icon 0.5s forwards;
+}
+
+.hamburger line.top {
+  --rotation: -45deg;
+  transform-origin: 65px 45px;
+}
+
+.hamburger:hover line {
+  @apply stroke-yellow-400;
+}
+
+.hamburger line.bottom {
+  --rotation: 45deg;
+  transform-origin: 60px 55px;
+}
+
+@keyframes to-close-icon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
+
+@keyframes to-open-icon {
+  100% {
+    stroke-dashoffset: 0;
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+  0% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
+
+/* Hamburger Style End */
+
+.animatedImg {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-15%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
