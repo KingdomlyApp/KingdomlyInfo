@@ -14,6 +14,7 @@ export default function Lenders() {
             What We Offer
           </strong>
         </div>
+        
         <div className="flex flex-wrap justify-center items-start pt-10 pb-20">
           <LenderItem content={"/assets/offer1.png"} />
           <LenderItem content={"/assets/offer2.png"} />
