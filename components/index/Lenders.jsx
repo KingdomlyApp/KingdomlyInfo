@@ -19,68 +19,13 @@ export default function Lenders({ setIsCreation, isCreation }) {
             What We Offer
           </strong>
         </div>
-        <div className="grid px-4 overflow-scroll md:overflow-hidden rounded-xl bg-[#111A19] py-3 place-items-center">
-          <div className="flex gap-5">
-            <button
-              onClick={() => {
-                setIsCreation(true);
-              }}
-              className={`${
-                isCreation
-                  ? "bg-[#EED821] text-[#111A19]"
-                  : "bg-transparent duration-500 animated-button text-white"
-              } rounded-xl defaultButton`}
-            >
-              NFT Creation
-            </button>
-            <button
-              onClick={() => {
-                setIsCreation(false);
-              }}
-              className={`${
-                !isCreation
-                  ? "bg-[#EED821] text-[#111A19]"
-                  : "bg-transparent duration-500 animated-button text-white"
-              } rounded-xl defaultButton`}
-            >
-              Lending and Renting
-            </button>
-          </div>
+        <div className="flex flex-wrap justify-center items-start pt-10 pb-20">
+          <LenderItem content={"/assets/offer1.png"} />
+          <LenderItem content={"/assets/offer2.png"} />
+          <LenderItem content={"/assets/offer3.png"} />
+          <LenderItem content={"/assets/offer4.png"} />
+          <LenderItem content={"/assets/offer5.png"} />
         </div>
-        <AnimatePresence>
-          {isCreation && (
-            <motion.div
-              initial={{ x: -inner.width }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="flex flex-wrap  justify-center items-start pt-10 pb-20"
-            >
-              <LenderItem content={"/assets/nft1.png"} />
-              <LenderItem content={"/assets/nft2.png"} />
-              <LenderItem content={"/assets/nft3.png"} />
-              <LenderItem content={"/assets/nft4.png"} />
-              <LenderItem content={"/assets/nft5.png"} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {!isCreation && (
-            <motion.div
-              initial={{ x: inner.width }}
-              animate={{ x: 0 }}
-              exit={{ x: inner.width }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="flex flex-wrap  justify-center items-start pt-10 pb-20"
-            >
-              <LenderItem content={"/assets/offer1.png"} />
-              <LenderItem content={"/assets/offer2.png"} />
-              <LenderItem content={"/assets/offer3.png"} />
-              <LenderItem content={"/assets/offer4.png"} />
-              <LenderItem content={"/assets/offer5.png"} />
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </>
   );
