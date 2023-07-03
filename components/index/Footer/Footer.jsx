@@ -147,7 +147,7 @@ export function FooterLandingPage() {
               </div>
             </div>
 
-            <div className="basis-full lg:basis-auto lg:text-start text-center lg:justify-start justify-center flex flex-col flex-wrap gap-2 md:gap-6 mb-8">
+            <div className="basis-full lg:basis-auto  text-center lg:justify-start justify-center flex flex-col flex-wrap gap-2 md:gap-6 mb-8">
               <h3 className="text-xl text-white font-semibold mb-4">Company</h3>
               <a
                 href="#about"
@@ -168,10 +168,20 @@ export function FooterLandingPage() {
               >
                 Roadmap
               </a>
+              <a
+                href="https://discord.gg/bqQ2PQA4FM"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white text-base hover:underline"
+              >
+                Request a feature
+              </a>
               <div>
                 <a
-                  href="#/"
-                  className="text-white md:mt-0 flex items-center justify-center lg:justify-start basis-auto  text-base hover:underline"
+                  href="https://docs.kingdomly.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white md:mt-0 flex items-center justify-center  basis-auto  text-base hover:underline"
                 >
                   Docs
                   <BsBoxArrowUpRight size={12} className="ml-1" />
@@ -179,11 +189,11 @@ export function FooterLandingPage() {
               </div>
             </div>
 
-            <div className="basis-full lg:basis-auto lg:justify-start justify-center  flex flex-wrap mb-8 lg:mb-4 h-fit">
+            <div className="basis-full lg:basis-auto text-center justify-center  flex flex-wrap mb-8 lg:mb-4 h-fit">
               <h3 className="lg:basis-full text-xl text-white font-semibold mb-8  ">
                 Social Media
               </h3>
-              <div className="basis-full lg:justify-start justify-center flex ">
+              <div className="basis-full  justify-center flex ">
                 <a
                   href="https://twitter.com/KingdomlyApp"
                   title="Twitter"

@@ -232,3 +232,98 @@ button[aria-expanded="true"] line {
     transform: rotate(-360deg);
   }
 }
+
+/* Landing page Loader */
+
+.landingLoader {
+  animation: rotate 2s infinite;
+  height: 45px;
+  width: 45px;
+}
+
+.landingLoader:before,
+.landingLoader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.landingLoader:before {
+  animation: ball1 1s infinite;
+  background-color: #fff;
+  box-shadow: 30px 0 0 #eed821;
+  margin-bottom: 10px;
+}
+.landingLoader:after {
+  animation: ball2 1s infinite;
+  background-color: #eed821;
+  box-shadow: 30px 0 0 #fff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #eed821;
+  }
+  50% {
+    box-shadow: 0 0 0 #eed821;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #eed821;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
+}
+
+/* Animated Button */
+.defaultButton {
+  @apply px-2 z-[1] block overflow-hidden  relative uppercase text-base sm:text-lg w-60 sm:w-64 h-16 font-semibold;
+}
+
+.animated-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #eed821;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.animated-button:hover {
+  color: #eed821;
+}
+
+.animated-button:hover::after {
+  width: 100%;
+  left: 0;
+}

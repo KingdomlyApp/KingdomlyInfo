@@ -2,20 +2,21 @@ import { useState, useEffect } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import Hamburger from "./Hamburger";
 import { motion, AnimatePresence } from "framer-motion";
+import { useWindowLayout } from "../../hooks/Window";
 
 export function NavbarLandingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const inner = useWindowLayout();
 
   const hiddenVariants = {
     visible: {
       transition: { staggerChildren: 0.1, duration: 0.3 },
       y: 0,
     },
-    hidden: typeof window !== "undefined" &&
-      window.innerWidth < 1024 && {
-        y: -window.innerHeight,
-      },
+    hidden: window.innerWidth < 1024 && {
+      y: -inner.height,
+    },
   };
 
   useEffect(() => {
@@ -107,7 +108,7 @@ export function NavbarLandingPage() {
                     });
                 }}
               >
-                Rentals
+                Why Us?
               </a>
             </motion.li>
             <motion.li
@@ -142,10 +143,10 @@ export function NavbarLandingPage() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://www.kingdomly.app/community/0xfd72c8923ef3236aff248aaaecda956e78824a95"
+                href="https://creator.kingdomly.app"
                 className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:hover:bg-transparent mdlg:p-0 drop-shadow-lg"
               >
-                Community
+                Create NFT
               </a>
             </motion.li>
             <motion.li
