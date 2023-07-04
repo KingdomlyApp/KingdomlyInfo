@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }) {
             `,
           }}
         />
+        <title>Kingdomly</title>
       </Head>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
