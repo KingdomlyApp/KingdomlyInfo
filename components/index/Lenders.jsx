@@ -17,6 +17,7 @@ export default function Lenders({ setIsCreation, isCreation }) {
         <div className="flex justify-center mt-[20vh] mb-[10vh]">
           <strong className="text-white text-3xl sm:text-5xl text-center">
             What We Offer
+            
           </strong>
         </div>
         <div className="grid px-4 overflow-scroll md:overflow-hidden rounded-xl bg-[#111A19] py-3 place-items-center">
