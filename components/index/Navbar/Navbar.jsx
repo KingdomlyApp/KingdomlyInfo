@@ -14,7 +14,7 @@ export function NavbarLandingPage() {
       transition: { staggerChildren: 0.1, duration: 0.3 },
       y: 0,
     },
-    hidden: window.innerWidth < 1024 && {
+    hidden: inner.width < 1024 && {
       y: -inner.height,
     },
   };
@@ -81,7 +81,7 @@ export function NavbarLandingPage() {
               transition={{ duration: 0.5 }}
             >
               <a
-                href="https://kingdomly.app/"
+                href="https://kingdomly.app/mint"
                 rel="noreferrer"
                 target="_blank"
                 className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
@@ -188,7 +188,7 @@ export function NavbarLandingPage() {
                 transition={{ duration: 0.5 }}
               >
                 <a
-                  href="https://kingdomly.app/"
+                  href="https://kingdomly.app/mint"
                   rel="noreferrer"
                   target="_blank"
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
