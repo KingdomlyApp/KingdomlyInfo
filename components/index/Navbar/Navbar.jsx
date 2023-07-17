@@ -81,7 +81,7 @@ export function NavbarLandingPage() {
               transition={{ duration: 0.5 }}
             >
               <a
-                href="https://kingdomly.app/"
+                href="https://kingdomly.app/mint"
                 rel="noreferrer"
                 target="_blank"
                 className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"
@@ -188,7 +188,7 @@ export function NavbarLandingPage() {
                 transition={{ duration: 0.5 }}
               >
                 <a
-                  href="https://kingdomly.app/"
+                  href="https://kingdomly.app/mint"
                   rel="noreferrer"
                   target="_blank"
                   className="block py-2 pr-4 pl-3 text-white hover:text-yellow-400 mdlg:p-0 drop-shadow-lg"

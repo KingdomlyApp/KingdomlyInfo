@@ -73,7 +73,7 @@ export default function ParallaxHero() {
               </h1>
               <div className="mt-4 xs:mt-8 sm:mt-12 flex-col basis-full ">
                 <a
-                  href="https://www.kingdomly.app/"
+                  href="https://www.kingdomly.app/mint"
                   className="flex absolute  items-center justify-center w-fit px-2 py-1 md:px-4 md:py-2 text-xs sm:text-lg md:text-xl text-[#A68A27] border-[#A68A27] border-2 hover:bg-[#A68A27] hover:text-white font-medium rounded-lg "
                 >
                   Into the Fray
