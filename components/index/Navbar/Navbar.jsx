@@ -14,7 +14,7 @@ export function NavbarLandingPage() {
       transition: { staggerChildren: 0.1, duration: 0.3 },
       y: 0,
     },
-    hidden: window.innerWidth < 1024 && {
+    hidden: inner.width < 1024 && {
       y: -inner.height,
     },
   };

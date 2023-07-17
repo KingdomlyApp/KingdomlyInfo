@@ -82,6 +82,20 @@ export default function Lenders({ setIsCreation, isCreation }) {
           )}
         </AnimatePresence>
       </div>
+
+      <motion.div
+        initial={{ x: inner.width }}
+        animate={{ x: 0 }}
+        exit={{ x: inner.width }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="flex flex-wrap hidden justify-center items-start pt-10 pb-20"
+      >
+        <LenderItem content={"/assets/offer1.png"} />
+        <LenderItem content={"/assets/offer2.png"} />
+        <LenderItem content={"/assets/offer3.png"} />
+        <LenderItem content={"/assets/offer4.png"} />
+        <LenderItem content={"/assets/offer5.png"} />
+      </motion.div>
     </>
   );
 }

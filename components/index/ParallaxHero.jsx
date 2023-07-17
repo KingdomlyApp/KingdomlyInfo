@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
-export default function ParallaxHero() {
+export default function ParallaxHero({ setLoading }) {
   // Defining animations
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -57,6 +57,9 @@ export default function ParallaxHero() {
               src="/assets/castle.svg"
               className="absolute h-[90%] right-[5%] bottom-[3%] md:right-[8%]  md:bottom-[7%] lg:right-[8%] lg:bottom-[7%]"
               alt=""
+              onLoad={() => {
+                setLoading(false);
+              }}
             />
             <ParallaxBannerLayer image="/assets/grass1v2.png" speed={-6} />
             <motion.div

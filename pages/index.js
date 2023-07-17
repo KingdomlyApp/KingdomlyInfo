@@ -14,37 +14,41 @@ export default function Home() {
   const [isCreation, setIsCreation] = useState(true);
   const inner = useWindowLayout();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 3500);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3500);
+  //   return () => {
+  //     clearTimeout(timeout);
+  //   };
+  // }, []);
 
   return (
     <AnimatePresence>
-      {loading ? (
-        <LoadingComponent />
-      ) : (
-        <>
-          {/* <--NAV & HERO--> */}
-          <ParallaxHero />
-
-          {/* <--LENDERS--> */}
-          <Lenders isCreation={isCreation} setIsCreation={setIsCreation} />
-
-          {/* <--RENTALS--> */}
-          <Renters isCreation={isCreation} />
-
-          {/* <--Milestones--> */}
-          <Roadmap />
-
-          {/* <--FOOTER--> */}
-          <FooterLandingPage />
-        </>
+      {loading && (
+        <motion.div
+          exit={{ x: -inner.width }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <LoadingComponent />
+        </motion.div>
       )}
+      <main className={`${loading && "hidden"}`}>
+        {/* <--NAV & HERO--> */}
+        <ParallaxHero setLoading={setLoading} />
+
+        {/* <--LENDERS--> */}
+        <Lenders isCreation={isCreation} setIsCreation={setIsCreation} />
+
+        {/* <--RENTALS--> */}
+        <Renters isCreation={isCreation} />
+
+        {/* <--Milestones--> */}
+        <Roadmap />
+
+        {/* <--FOOTER--> */}
+        <FooterLandingPage />
+      </main>
     </AnimatePresence>
   );
 }
@@ -53,35 +57,23 @@ const LoadingComponent = () => {
   const [loader, setLoader] = useState(true);
   const inner = useWindowLayout();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoader(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
-
   return (
     <AnimatePresence>
-      {loader && (
-        <motion.main
-          exit={{ x: -inner.width }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="w-screen grid place-items-center h-screen"
-        >
-          <section>
-            <div className=" -mt-10 flex flex-col items-center gap-3 text-white ">
-              <Image src={logo} alt="Kingdomly" width={120} height={120} />
-              <h1 className="text-4xl mb-5 font-semibold ">Kingdomly</h1>
-            </div>
-            <div className="grid place-items-center">
-              <span className="landingLoader"></span>
-            </div>
-          </section>
-        </motion.main>
-      )}
+      <motion.main
+        exit={{ x: -inner.width }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="w-screen grid place-items-center h-screen"
+      >
+        <section>
+          <div className=" -mt-10 flex flex-col items-center gap-3 text-white ">
+            <Image src={logo} alt="Kingdomly" width={120} height={120} />
+            <h1 className="text-4xl mb-5 font-semibold ">Kingdomly</h1>
+          </div>
+          <div className="grid place-items-center">
+            <span className="landingLoader"></span>
+          </div>
+        </section>
+      </motion.main>
     </AnimatePresence>
   );
 };
