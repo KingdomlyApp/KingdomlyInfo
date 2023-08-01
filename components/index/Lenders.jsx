@@ -8,18 +8,24 @@ export default function Lenders({ setIsCreation, isCreation }) {
   return (
     <>
       <div
-        className="vertical pt-[10vh] md:pt-[10vh] padding "
+        className="vertical pt-3 sm:pt-[10vh] padding "
         style={{
           backgroundColor: "#0c1313",
           backgroundImage: 'url("/assets/stars.png")',
         }}
       >
-        <div className="flex justify-center mt-[20vh] mb-[10vh]">
+        <div className="flex justify-center mt-16 sm:mt-[20vh] mb-5 sm:mb-10">
           <strong className="text-white text-3xl sm:text-5xl text-center">
-            What We Offer
+            How do I explain what we are?
           </strong>
         </div>
-        <div className="grid px-4 overflow-scroll md:overflow-hidden rounded-xl bg-[#111A19] py-3 place-items-center">
+        <div className="text-white text-center mb-5 sm:mb-10 text-base xs:text-base sm:text-lg lg:text-xl ">
+          <p>We are end to end NFT’s —{`>`} creation to sales</p>
+          <p className="mt-1">
+            The best place to discover new collections and help them launch
+          </p>
+        </div>
+        {/* <div className="grid px-4 overflow-scroll md:overflow-hidden rounded-xl bg-[#111A19] py-3 place-items-center">
           <div className="flex gap-5">
             <button
               onClick={() => {
@@ -46,7 +52,7 @@ export default function Lenders({ setIsCreation, isCreation }) {
               Lending and Renting
             </button>
           </div>
-        </div>
+        </div> */}
         <AnimatePresence>
           {isCreation && (
             <motion.div

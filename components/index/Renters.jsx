@@ -9,13 +9,12 @@ export default function Renters({ isCreation }) {
     >
       <div className="flex justify-center">
         <strong className="text-white text-3xl xs:text-4xl md:text-5xl text-center ">
-          How We Do{" "}
           <motion.span
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
           >
-            {isCreation ? "NFT Creations" : "Rentals"}
+            {isCreation ? "How We Help You Create NFTs" : "How we do Rentals"}
           </motion.span>
         </strong>
       </div>
@@ -29,8 +28,8 @@ export default function Renters({ isCreation }) {
           content={
             isCreation
               ? [
-                  "Tailor the creation duration of your NFT to meet your preferences as an NFT creator. Set the timeframe that suits you best and start the creative journey.",
-                  " With streamlined processes, collectors can swiftly mint your unique digital assets and you receive secure payments, allowing you to focus on what matters most – unleashing your creativity and connecting with collectors.",
+                  "Choose between launching a generative collection or one of ones. With generative collections you can create thousands of unique NFTs from a set of layers that we help you configure.",
+                  "No need to look anywhere else, we handle the entire collection generation process. Unleash your creativity without needing to know a single thing about smart contracts or how to structure metadata.",
                 ]
               : [
                   "As a Renter, simply specify the amount of days you’d like to borrow an NFT for and you’re good to go.",
@@ -42,12 +41,16 @@ export default function Renters({ isCreation }) {
         />
         <RentalItem
           reverse={true}
-          title={"Automatically get a hold of your rights."}
+          title={
+            isCreation
+              ? "Disrupt the NFT status quo."
+              : "Automatically get a hold of your rights"
+          }
           content={
             isCreation
               ? [
-                  "Claim ownership effortlessly with NFT creation. By minting your art as an NFT, your rights are automatically established, simplifying the process and giving you peace of mind.",
-                  "When your NFT is purchased, the blockchain smart contract handles the payment process, ensuring a secure and direct transfer of funds to you. Focus on your creativity while Kingdomly takes care of your rights and financial rewards.",
+                  "Worry less about the tech. Spend your time focusing on the artwork and providing utility to your holders. Save time and change the game at the same time.",
+                  "Get utility out the gate by providing token gated applications and a token gated community for your collection with Kingdomly. API’s available for web2 developers if you are tech friendly.",
                 ]
               : [
                   "This total rent price gets deducted from the borrower’s balance and sent to Kingdomly contract which then transfers “usership” rights linked to the rented NFT from  “Lender” to “Borrower”",
@@ -60,14 +63,14 @@ export default function Renters({ isCreation }) {
         <RentalItem
           title={
             isCreation
-              ? "Smart-regulation of arts and assets."
+              ? "Control your collection."
               : "Smart-regulation of rental assets."
           }
           content={
             isCreation
               ? [
-                  "Experience the streamlined management of your digital assets, ensuring fair compensation, and adherence to predefined rules. Enjoy the benefits of smart asset regulation, empowering you to maximize the value of your creations in the digital landscape.",
-                  "Embrace the power of smart regulation in NFT creation. Through Kingdomly, you can ensure transparent and verifiable ownership of your digital assets. ",
+                  "Ensure transparent and verifiable ownership of your collection. Add private sales and whitelist who you see fit. Pause the mint whenever you need.",
+                  "Customize the way your collection is presented in the custom mint page. Make it easy for people to learn about who you are and the project roadmap!",
                 ]
               : [
                   "Once this is confirmed, the rent price is transferred from Kingdomly to the “Lender”",

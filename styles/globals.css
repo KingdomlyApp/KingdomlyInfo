@@ -305,7 +305,7 @@ button[aria-expanded="true"] line {
 
 /* Animated Button */
 .defaultButton {
-  @apply px-2 z-[1] block overflow-hidden  relative uppercase text-base sm:text-lg w-60 sm:w-64 h-16 font-semibold;
+  @apply px-2 z-[1] block overflow-hidden  relative uppercase text-base sm:text-lg  w-40  sm:w-64 h-16 font-semibold;
 }
 
 .animated-button::after {
@@ -326,4 +326,8 @@ button[aria-expanded="true"] line {
 .animated-button:hover::after {
   width: 100%;
   left: 0;
+}
+
+* {
+  @apply select-none;
 }
