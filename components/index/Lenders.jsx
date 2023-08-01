@@ -16,7 +16,7 @@ export default function Lenders({ setIsCreation, isCreation }) {
       >
         <div className="flex justify-center mt-16 sm:mt-[20vh] mb-5 sm:mb-10">
           <strong className="text-white text-3xl sm:text-5xl text-center">
-            How do I explain what we are?
+            What We Offer
           </strong>
         </div>
         <div className="text-white text-center mb-5 sm:mb-10 text-base xs:text-base sm:text-lg lg:text-xl ">
