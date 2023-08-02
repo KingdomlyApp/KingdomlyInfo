@@ -67,7 +67,7 @@ export default function ParallaxHero({ setLoading }) {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-                className="flex flex-col col-start-1 text-center sm:text-start row-start-1 translate-y-1 pt-6 sm:pt-20 pl-5  z-50"
+                className="flex flex-col col-start-1 text-center sm:text-start row-start-1 translate-y-1 pt-6 sm:pt-20 sm:pl-5  z-50"
               >
                 <h1 className="text-3xl w-full xs:text-5xl sm:text-6xl lg:text-8xl whitespace-nowrap text-white font-bold drop-shadow-lg">
                   NFT Creation <br />
