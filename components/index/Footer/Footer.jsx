@@ -240,9 +240,25 @@ export function FooterLandingPage() {
               </h3>
               <p className="text-white">kingdomlyemail@gmail.com</p>
             </div>
+            <div className="basis-full lg:basis-auto w-fit  flex flex-col lg:text-start text-center flex-wrap mb-4 h-fit">
+              <h3 className="basis-full lg:basis-auto text-xl text-white font-semibold mb-4">
+                Credits
+              </h3>
+              <p className="text-white">
+                Hero image by{" "}
+                <a
+                  className="hover:underline"
+                  href="https://www.freepik.com/free-vector/castle-silhouette-background-with-dragon-flying_2392170.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Freepik
+                </a>
+              </p>
+            </div>
           </div>
-          <hr className=" border-white my-4 md:my-8 mx-4 sm:mx-0" />
-          <span className="block  text-white  text-center text-xs sm:text-base lg:text-md">
+          <hr className="border-white my-4 md:my-8 mx-4 sm:mx-0" />
+          <span className="block text-white text-center text-xs sm:text-base lg:text-md">
             Copyright @ 2022 Kingdomly
           </span>
         </footer>
